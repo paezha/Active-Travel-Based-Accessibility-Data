@@ -38,7 +38,7 @@ Moreover, calculating ATB accessibility in both approaches requires multiple dat
 
 Research about walking and cycling tend to categorize these modes into two different parts of literature (The first is about health and leisure and the second is about transport and land-use), and both have their own viewpoints, data, methods, and policy orientations (@pucher2010infrastructure; @millward2013active; @fishman2016cycling).
 
-Measures of ATB accessibility can either be location-based, focused on the spatial separation to opportunities from specific locations, or individual-based with the incorporation of the space and time constraints of individuals. This review focuses on location-based accessibility. Vale et al (2016) categorized location-based accessibility measures into four main groups: first, activity-based, which includes gravity-based (also designated attraction-accessibility or potential) and cumulative opportunities measures (also known as isochrones or contour measures). In addition, this measure has been widely used in non-motorized accessibility studies [@iacono2010; @lowry2012assessment; @millward2013active; @prins2014many; @li2020]; second, topology infrastructure-based, which include topological measures of the network [@hull2012accessibility; @lundberg2012accessibility]; third, distance-based, which include analyses of the closest facilities [@apparicio2008comparing; @sadler2011application], and the last category being utility-based measures which are also known as benefits measures [@geurs2004; @hunt2007influences; @vale2009sustainable; @el2011place].
+Measures of ATB accessibility can either be location-based, focusing on the distances to opportunities from particular locations, or individual-based, taking into account the limitations of people's time and space. This review focuses on location-based accessibility that is based on location. Vale et al (2016) categorized location-based accessibility measures into four main groups: first, activity-based, which includes gravity-based (also designated attraction-accessibility or potential) and cumulative opportunities measures (also known as isochrones or contour measures). In addition, this measure has been widely used in non-motorized accessibility studies [@iacono2010; @lowry2012assessment; @millward2013active; @prins2014many; @li2020]; second, topology infrastructure-based, which include topological measures of the network [@hull2012accessibility; @lundberg2012accessibility]; third, distance-based, which include analyses of the closest facilities [@apparicio2008comparing; @sadler2011application], and the last category being utility-based measures which are also known as benefits measures [@geurs2004; @hunt2007influences; @vale2009sustainable; @el2011place].
 
 potential compatibility with regional travel forecasting models is an essential reason for the wide use of location-based measures instead of individual-based measures for active transport mode. So, it is easy to extract travel times from one area to another area using the coded network. moreover, number of potential opportunities are available at the area level [@iacono2010; @saghapour2017measuring].
 
@@ -241,7 +241,61 @@ Explaining the Bikeability of an environment has included the following characte
 
 ## A framework for assessing data sources and needs
 
-For calculating accessibility in active transport mode, multiple data sources are required. After reviewing most of active travel mode articles, we have divided the data used to calculate accessibility in these studies into 7 different categories, which are: Travel data (trips), Users data (Socio-economic and personal data), Origin- destination, Cycling and walking network, Spatial data (boundary, land use, postal code, . . . ), additional data (such as Traffic data, weather data, slope, Level of Traffic Stress, impedance value, speed ). Table 5, shows required data based on the each measure.
+For calculating accessibility in active transport mode, multiple data sources are required. Following a review of the relevant literature, it was discovered that various data sources such as Travel data (trips), Users data (Socio-economic and personal data), Origin- destination, Cycling and walking network, Spatial data (boundary, land use, postal code, . . . ), additional data (such as Traffic data, weather data, slope, Level of Traffic Stress, impedance value, speed ) are required in order to determine the accessibility of active transportation.
+
+A particular kind of data management system is a data warehouse. Data warehousing is a topic that includes application tools, architectures, information services, and communication infrastructures to combine information from disparate heterogeneous operational data sources that is valuable for decision-making. This data is collected into a single repository known as a data warehouse (DW), which may be used for direct querying and analysis, and as a source for creating logical data marts focused on particular parts of the organization [@kimball2011data]. Important data for decision making is often retrieved from the organization's data sources, processed (i.e., cleaned and homogenized), and then integrated within a sizable data repository (the data warehouse), in what is known as the ETL (extraction/transform/loading) process [@romero2010framework].Inconsistent data, incompatible data formats, data granularity, and other common problems with distributed heterogeneous information services are covered in the first phase (for instance, see [@zhuge1996strobe]).Regarding the second step, creating the DW necessitates methodologies entirely distinct from those used for operational information systems.In this article, the approach used to design the data warehouse is based on the multidimensional paradigm.The fact/dimension dichotomy serves to distinguish the multidimensional view of data, which is characterized by its representation of data (i.e., the relevant fact) as though it were in an n-dimensional space (with as many axes as dimensions of analysis of interest). This paradigm makes it simple to comprehend and evaluate data illustrating the various angles from which a subject may be examined. As a result, the multidimensional model is appropriate for non-expert users such as knowledge workers (from here on, the data warehouse end-users).The third phase needs for the ability to leverage aggregate navigation [@gupta1995aggregate], complex query optimization [@chaudhuri1994including], advanced indexing strategies [@lomet1990hb], and user-friendly visual user interfaces for OLAP (On-line Analytical Processing) [@chaudhuri1997overview; @colliat1996olap] and data mining [@fayyad1996data].
+
+In this study, the multidimensional data warehouse design and end-user requirements elicitation tasks are supported by a user-centered methodology. Three steps make up the process:
+
+First, our method begins by thoroughly examining the data sources to determine, without yet taking requirements into consideration, the multidimensional knowledge they capture (i.e., data likely to be analyzed from a multidimensional point of view).
+
+Second, we suggest using this knowledge to aid in the work of needs elicitation. By doing this, we are able to fully utilize the sources' analytical skills while already balancing requirements with the data sources.
+
+Third, once the requirements are established, we automatically generate the data warehouse conceptual schema and the multidimensional knowledge extracted from the sources.
+
+`
+
+
+
+
+
+
+
+
+
+
+
+. Table 5, shows required data based on the each measure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
