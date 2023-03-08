@@ -94,7 +94,8 @@ In this equation, ${𝑉_𝑗} = β{Z_j}$: The systematic utility of alternative
 
 $$
   I ^{𝑖𝑝} = E [MAX _j(U_j)] = \ln(\sum_{j \epsilon L^ {ip}} e ^ (\beta {z_j})
-  $$ That is, it is the natural logarithm of the denominator of the logit choice model (sometimes referred to as the "logsum" term). Further, it can also be shown that this expected maximum utility is the consumer's surplus for this choice. Thus it is a standard measure of economic benefit. Given this, Ben-Akiva and Lerman (1985) argue that it also provides a behaviourally and economically sound definition of accessibility: accessibility for a given activity is the expected utility that would be derived from participation in this activity, which is also the consumer surplus associated with this participation. That is:
+$$ 
+That is, it is the natural logarithm of the denominator of the logit choice model (sometimes referred to as the "logsum" term). Further, it can also be shown that this expected maximum utility is the consumer's surplus for this choice. Thus it is a standard measure of economic benefit. Given this, Ben-Akiva and Lerman (1985) argue that it also provides a behaviourally and economically sound definition of accessibility: accessibility for a given activity is the expected utility that would be derived from participation in this activity, which is also the consumer surplus associated with this participation. That is:
 
 $$
   A ^ {ip} = \ln (\sum_{j\epsilon L^ {ip}} e ^ (\beta {z_j})
