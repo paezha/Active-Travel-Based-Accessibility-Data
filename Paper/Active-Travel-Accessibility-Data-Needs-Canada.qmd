@@ -43,7 +43,7 @@ On the other hand, space-time accessibility considers temporal variations in act
 To write a general formula for accessibility for active transportation modes, we can modify the formula, by taking into account factors that are specific to active transportation. Here is one possible formula:
 
 $$
-A^{p}_{ik} = \sum_{j=1}^{J} g(O_{jk}) f(c^p_{ij})
+A^{pk}_i = \sum_{j=1}^{J} g(O^k_j) f(c^p_{ij})
 $$ {#eq-general-accessibility}
 
 With functions for the opportunities that allow this formulation:
@@ -113,8 +113,6 @@ $$ {#eq-gravity-measures}
 This equation gives the accessibility from the origin location i, W_j are relevant opportunities found at j, f(c_{ij}) is the cost of moving between i and j. Function f() defines a kernel around location i. Activity-based measures are useful when opportunities are complementary (e.g., jobs, people, services, parks) and when access to more opportunities and being closer (with gravity-based models) is advantageous.
 
 Cumulative opportunities (also known as isochrones or contour measures), measures count the number of opportunities within a defined catchment area. In contrast to the utility measure, which measures accessibility by the 'net utility' from travel, the cumulative measure represents accessibility with the total number of opportunities. This measure counts both the number of reachable opportunities and the associated travel costs.
-
-
 
 $$
 A_i = \sum_{j = 1}^{J}{\ W_{j} f(c_{ij})}
