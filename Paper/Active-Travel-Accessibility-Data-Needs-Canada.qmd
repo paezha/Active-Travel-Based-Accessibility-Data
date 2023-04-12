@@ -30,7 +30,7 @@ The reminder of this paper is organized as follows. Section 2 presents a review 
 
 Transportation planning has emerged as a distinct field centered primarily on mobility, defined as the ease of movement. Mobility indicators such as travel speed and travel time were proposed in this context, with a focus on motorized transportation [@banister2008sustainable]. The concept of accessibility has long been adopted in both spatial and transportation research to assess the quality and extent of the relationships between spatial development of a certain area and the transportation system serving it. The seminal work of Hansen (1959) defined accessibility as "the potential of opportunities for interaction", measuring the number and variety of opportunities which can be obtained from a specific location by means of the transportation system.As a result of Hansen's work, researchers began to emphasize the importance of including accessibility as a performance indicator in land use and transportation plans as an alternative to mobility-based transportation planning [@koenig1980indicators; @morris1979accessibility; @wachs1973physical]. Furthermore, the researchers argued that improved access reflects the network's economic and social benefits, specifically in terms of land value and quality of life [@koenig1980indicators; @wachs1973physical]. Recently, accessibility has been promoted as a critical component of land use and transportation planning, specifically in terms of social equity, economic development, and environmental impacts [@banister2008sustainable; @handy2002accessibility; @lucas2012transport; @preston2007accessibility]. For example, in 2004, Geurs and van Wee deconstructed the concept of accessibility into four elements: (i) Land use describes the quality, quantity, and spatial distribution of opportunities as destination places, such as schools, jobs, hospitals, and recreational facilities, as well as demand for opportunities at origin places; (ii) Transportation refers to the transportation system represented by the disutility for a person to travel from an origin to a destination using a specific mode of transportation; (iii) time, which accounts for the time constraints in terms of the availability of opportunities throughout the day and the time available for people to take advantage of such opportunities; and iv) Individual, which indicates specific (groups of) people's capabilities (determined by income, education level, travel mode availability, etc.) and needs (determined by age, household situation, etc.).
 
-Mobility-based approaches emphasize travel time reduction, whereas accessibility planning aims to provide all individuals with a reasonable travel time to a variety of destinations. As a result, accessibility planning prioritizes active and public transportation and incorporates land use policies that shorten distances between activities[\@ @banister2008sustainable].Accessibility refers to the ease of access to different destinations which are valuable and can be reached. In order to calculate accessibility, the implementation of access measures varies depending on the research need, mode of transport, data need, activities, and land use pattern, as well as the costs of travel over the transport infrastructure that connects it. So, the emphasis on different elements of accessibility has resulted in multiple measurement methods and indicators [for example, @geurs2004; @kelobonye2019relative; @lee2010reexamining; @neutens2015accessibility; @paez2010accessibility; @vandenbulcke2009mapping], including proximity, cumulative, gravity, utility-based, and space-time prism models as the dominant approaches. However, there are disagreements about how to evaluate this concept [@castiglione2006application; @fan2012impact; @wang2015gis].
+Mobility-based approaches emphasize travel time reduction, whereas accessibility planning aims to provide all individuals with a reasonable travel time to a variety of destinations. As a result, accessibility planning prioritizes active and public transportation and incorporates land use policies that shorten distances between activities[@banister2008sustainable].Accessibility refers to the ease of access to different destinations which are valuable and can be reached. In order to calculate accessibility, the implementation of access measures varies depending on the research need, mode of transport, data need, activities, and land use pattern, as well as the costs of travel over the transport infrastructure that connects it. So, the emphasis on different elements of accessibility has resulted in multiple measurement methods and indicators [for example, @geurs2004; @kelobonye2019relative; @lee2010reexamining; @neutens2015accessibility; @paez2010accessibility; @vandenbulcke2009mapping], including proximity, cumulative, gravity, utility-based, and space-time prism models as the dominant approaches. However, there are disagreements about how to evaluate this concept [@castiglione2006application; @fan2012impact; @wang2015gis].
 
 In general, accessibility can be measured at the individual-based or locational level (place-based) [@miller2005place]. Indeed, place-based metrics are concerned with the land use and transportation components, and focus on the physical separation of key locations, say an origin and potential destinations.Cumulative-opportunity accessibility and gravity accessibility are examples of this category. This kind of accessibility refers to the degree to which people can reach and use services, amenities, and opportunities located in a specific geographic location, such as a neighborhood, city, or region.On the other hand, individual-based metrics take into account some representation of the space-time behavior of individuals and refers to the degree to which an individual person can reach and use services, amenities, and opportunities based on their personal characteristics, such as age, gender, income, mobility, and health status.Space-time accessibility and utility accessibility belong to this category. Individual-based accessibility considers the unique needs and preferences of individuals, including their ability to access different types of transportation, travel routes, and modes of transportation. Individuals-based accessibility is sometimes included in location-based studies by stratifying the population by age group or socioeconomic characteristics, as well as by segmenting destinations [@harris2001accessibility; @vale2009sustainable; @paez2010accessibility; @fan2012impact; @legrain2015and; @legrain2016travelling].These two approaches are related, and individual-based measures can in fact be seen as a special case of placed-based measures, where the impedance function and cost are a constant by origin.
 
@@ -40,47 +40,51 @@ On the one hand, space-time accessibility takes into account temporal variations
 
 On the other hand, space-time accessibility considers temporal variations in activities. Place-based accessibility assumes that all activities are carried out during hours chosen at random by researchers. However, activities are only available during their regular business hours.
 
-To write a formula for placed-based accessibility for active transportation modes, we can modify the formula, by taking into account factors that are specific to active transportation. Here is one possible formula:
+To write a general formula for accessibility for active transportation modes, we can modify the formula, by taking into account factors that are specific to active transportation. Here is one possible formula:
 
-$$A_i = \sum_{j=1}^{J} O_j f(C_{ij})$$
+$$
+A^{p}_{ik} = \sum_{j=1}^{J} g(O_{jk}) f(c^p_{ij})
+$$ {#eq-general-accessibility}
+
+With functions for the opportunities that allow this formulation:
+$$
+g(O_j) = O_j
+$$ {#eq-opportunities-function}
+
+\noindent as well as possibly agglomeration effects as in:
+$$
+g(O_j) = O^\alpha_j
+$$ {#eq-agglomeration-effects}
 
 This kind of accessibility measure was obtained from Hansen, 1959,which measures accessibility by the number of opportunities reachable via an impedance (or spatial decay) function.The impedance function reduces opportunities as travel costs rise (time, money, etc.).The impedance function computes using a variety of formulas, including negative power, exponential, lognormal, and log-logistic (@hansen1959accessibility; @ingram1971concept; @reggiani2011accessibility; @geurs2003evaluation; @vale2016active).A_i, O_j, and C_ij in this formula represent matrices of accessibility opportunities and costs, respectively. Following the development of @levinson2020towards, the functions (g and f) discount opportunities and costs based on diminishing value of opportunities with both number and cost.In principle, the matrix of weighted opportunities (O_j) can take into account different activity types, times of day, and all available modes, as well as the matrix of all relevant cost elements (C_ij), which may be the full social costs or generalized internal costs, depending on the purpose.
 
 The decay function's cumulative opportunities (rectangular) formulation is as follows:
-
-```{=tex}
-\documentclass{article}
-\usepackage{amsmath} % for cases environment and \text command
-```
-\\begin{document} \[ f(C\_{ij} =
-
-```{=tex}
+$$
+f(c^p_{ij}) =
 \begin{cases}
-  1 & \text{if $ c_{ij} \le t $} \\
+  1 & \text{if } c^p_{ij} \le \gamma^p \\
   0 & \text{otherwise}
 \end{cases}
-```
-\]
+$$ {#eq-impedance-function}
 
-In addition, The widely used exponential decay formulation in gravity models is frequently given by: $$ f(c_{ij}) = exp(\theta C_{ij})$$
+In addition, The widely used exponential decay formulation in gravity models is frequently given by @eq-exponential-distance-decay: 
+$$
+f(c^p_{ij}) = exp(-\theta c^p_{ij})
+$$ {#eq-exponential-distance-decay}
 
-Generally, close opportunities are preferred over distant ones [@miller2004tobler], and fewer trips are made between distant locations than between nearby ones[@ingram1971concept].As a result, interaction is less likely in remote locations. In most cases, travel impedance functions are calibrated using observed trip likelihood or trip rate data from travel surveys[@geurs2001accessibility; @ingram1971concept].So, the impedance functions show reduced interaction between places. The trip rates can be used to calibrate the travel impedance function (f (C\_{ij})).
-
-We can modify the formula for placed-based accessibility to include individual-specific factors in order to write a formula for individual-based accessibility for active modes. Here is one example of a formula.
-
-$$ A = \frac {\sum_{i=1}^{I} A_i P_i} {\sum_{i=1}^{I} P_i}$$ where (P_i) is the number of people or visitors who use the relevant accessibility.
+Generally, close opportunities are preferred over distant ones [@miller2004tobler], and fewer trips are made between distant locations than between nearby ones[@ingram1971concept].As a result, interaction is less likely in remote locations. In most cases, travel impedance functions are calibrated using observed trip likelihood or trip rate data from travel surveys[@geurs2001accessibility; @ingram1971concept].So, the impedance functions show reduced interaction between places. The trip rates can be used to calibrate the travel impedance function (f (C_{ij})).
 
 Individual-based accessibility in active mode (e.g., walking, cycling) can also be difficult to calculate due to a variety of factors. Some of the major constraints for calculating individual-based accessibility in active mode are as follows:
 
-1.Individual preferences for modes of transportation can have a significant impact on accessibility. Some people prefer to walk or ride their bikes, while others prefer to take public transportation or drive. Factors such as distance, time, safety, and comfort can all have an impact on personal preferences.
+1. Individual preferences for modes of transportation can have a significant impact on accessibility. Some people prefer to walk or ride their bikes, while others prefer to take public transportation or drive. Factors such as distance, time, safety, and comfort can all have an impact on personal preferences.
 
-2.Physical ability: Similar to place-based accessibility, personal physical ability can greatly impact individual-based accessibility in active mode. People with disabilities or health issues may find it difficult or impossible to travel by foot or bike, reducing their accessibility.
+1. Physical ability: Similar to place-based accessibility, personal physical ability can greatly impact individual-based accessibility in active mode. People with disabilities or health issues may find it difficult or impossible to travel by foot or bike, reducing their accessibility.
 
-3.Time constraints: Work schedules, childcare responsibilities, and other obligations can limit people's ability to travel actively. In order to save time, people may choose faster modes of transportation such as driving or taking public transportation, reducing accessibility in active modes. While individual-based accessibility is measured, it should be recognized that every individual has a different opportunity set available [@miller1991modelling]. Effectively, the available time threshold (t) varies for each person as a function of individual constraints, such as time of day, purpose, and so on. Constraints arise for a number of reasons. Time geography acknowledges that spatial and temporal characteristics limit an individual's choice of activities. A person can only be in one place and do one thing at a time [@chi2013impact; @pred1977choreography; @miller1991modelling; @miller2009field].These restrictions are classified into three types.The first section is capability constraints, which are biological and physical limitations that prevent people from participating in certain activities; The second section discusses authority constraints that restrict access to specific locations and the third section discusses coupling constraints, which are common in activities that require two or more people to be in the same place at the same time.In addition to these three categories, it should be noted that constraints vary depending on the time of day [@wu2020unifying].Time constraints can be visualized using a time-space diagram, the size of which is determined by both the amount of time available and the performance of the transportation system [@ilagcrstrand1970people].The space-time prism accounts for an individual's activity schedule and can be used to measure access to multiple activities and activity participation time using simple behavioral rules [@miller1991modelling]. Accessibility is measured by the total number of opportunities available within the space-time prism encompassing all possible paths under the time constraint [@tong2015transportation].So, while opportunities may be spatially accessible, the amount of time available in a day for people to reach and engage in these activities is limited. This line of thought leads to the constraints-based or people-based accessibility measure[@wu2001computational].
+1. Time constraints: Work schedules, childcare responsibilities, and other obligations can limit people's ability to travel actively. In order to save time, people may choose faster modes of transportation such as driving or taking public transportation, reducing accessibility in active modes. While individual-based accessibility is measured, it should be recognized that every individual has a different opportunity set available [@miller1991modelling]. Effectively, the available time threshold (t) varies for each person as a function of individual constraints, such as time of day, purpose, and so on. Constraints arise for a number of reasons. Time geography acknowledges that spatial and temporal characteristics limit an individual's choice of activities. A person can only be in one place and do one thing at a time [@chi2013impact; @pred1977choreography; @miller1991modelling; @miller2009field].These restrictions are classified into three types.The first section is capability constraints, which are biological and physical limitations that prevent people from participating in certain activities; The second section discusses authority constraints that restrict access to specific locations and the third section discusses coupling constraints, which are common in activities that require two or more people to be in the same place at the same time.In addition to these three categories, it should be noted that constraints vary depending on the time of day [@wu2020unifying].Time constraints can be visualized using a time-space diagram, the size of which is determined by both the amount of time available and the performance of the transportation system [@ilagcrstrand1970people].The space-time prism accounts for an individual's activity schedule and can be used to measure access to multiple activities and activity participation time using simple behavioral rules [@miller1991modelling]. Accessibility is measured by the total number of opportunities available within the space-time prism encompassing all possible paths under the time constraint [@tong2015transportation].So, while opportunities may be spatially accessible, the amount of time available in a day for people to reach and engage in these activities is limited. This line of thought leads to the constraints-based or people-based accessibility measure[@wu2001computational].
 
-4.Weather conditions, like place-based accessibility, can have an impact on individual-based accessibility in active mode. In extreme weather, people may be less likely to walk or cycle, reducing accessibility.
+1. Weather conditions, like place-based accessibility, can have an impact on individual-based accessibility in active mode. In extreme weather, people may be less likely to walk or cycle, reducing accessibility.
 
-5.Infrastructure: The quality and availability of infrastructure such as sidewalks, bike lanes, and pedestrian crossings can greatly impact individual-based accessibility in active mode. People may be less likely to choose active modes of transportation in areas with poor infrastructure, reducing accessibility.
+1. Infrastructure: The quality and availability of infrastructure such as sidewalks, bike lanes, and pedestrian crossings can greatly impact individual-based accessibility in active mode. People may be less likely to choose active modes of transportation in areas with poor infrastructure, reducing accessibility.
 
 Accessibility measures in active modes include activity-based measures, distance-based, topological or infrastructure-based measures, utility-based measures, as well as, walkability, and bikeability. Activity-based measures (includes gravity-based and cumulative opportunities measures) are based on the gravity model and weight opportunities according to a travel impedance function and the accessibility of a place is assessed as the combined effect of the size of opportunities and the cost of traveling to them. Distance-based measures analyze the closest facilities and include: 1) distance to the closest opportunity, 2) the number of opportunities within a defined distance or time, 3) the mean distance to all opportunities, and 4) the mean distance to a defined number of closest opportunities. Infrastructur -based measures are based exclusively on features of the street and transportation network and are insensitive to the location of activities in space. utility-based measures (also designated benefit measures) are developed from microeconomic random utility theory and describe accessibility as the result of a (rational) choice from a set of destination transportation alternatives [@kwan1998; @halden2000accessibility; @geurs2001accessibility; @apparicio2008comparing]. Walkability and bikeability measure the number of people, households or jobs distributed over a unit of area or measures how many types---offices, housing, retail, entertainment, services, and so on---are located in a given area [@frank2003health; @leslie2007walkability]. Indeed, using accurate accessibility measures for walking or cycling trips can assist transport planners in making more rational decisions in infrastructure provision for non-motorized transportation [@iacono2010; @devkota2012planning].
 
@@ -100,13 +104,32 @@ There are some limitations of using these measures for active travel modes. firs
 
 Activity-based measures include both gravity-based (also known as Hansen-type [@hansen1959accessibility] and cumulative opportunities measures. Gravity-based measures designated attraction --accessibility or potential and consider the number of opportunities weighted by the cost of traveling to them -- using a travel impedance function that values closer opportunities higher. The same researchers underlined the importance of choosing a suitable impedance function and it can be observed that a large variety of functions are applied. Commonly used functions are power, negative exponential, logistic and Gaussian functions [@iacono2010; @lowry2012assessment; @vasconcelos2012evaluation; @vale2017influence]. More recently Vale and Pereira (2017) conducted a study testing 20 pedestrian accessibility measures and identified the modified Gaussian and exponential function as the most robust ones for modeling walking accessibility. Cumulative opportunities (also known as isochrones or contour measures), measures count the number of opportunities within a defined catchment area.
 
-Gravity-based and cumulative opportunities measures are specific instances of a more general formulation [@paez2012]:
+Gravity-based measure derived from the gravity model's denominator and weighted opportunities according to an impedance function, which is given by the following expression: [@vale2016active]:
 
 $$
-\sum_{ik = j}^{p}{\ g(w_{jk}) f(c_{ij} ^ p)}
-$$
+A_i = \sum_{j = 1}^{J}{\ W^ \theta_{ij} f(c_{ij})}
+$$ {#eq-gravity-measures}
 
-This equation gives the accessibility from the origin location i, to opportunities of type k, from the perspective of individual p. This measure of accessibility is a function of the number of opportunities W of type k at location j, and the cost of moving between i and j as perceived/experienced by person p. Function f() defines a kernel around location i, usually symmetric if $c_{ij}$ is given by Euclidean distance, but not necessarily, for instance if $c_{ij}$ is measured over a network. Activity-based measures are useful when opportunities are complementary (e.g., jobs, people, services, parks) and when access to more opportunities and being closer (with gravity-based models) is advantageous.
+This equation gives the accessibility from the origin location i, W_j are relevant opportunities found at j, f(c_{ij}) is the cost of moving between i and j. Function f() defines a kernel around location i. Activity-based measures are useful when opportunities are complementary (e.g., jobs, people, services, parks) and when access to more opportunities and being closer (with gravity-based models) is advantageous.
+
+Cumulative opportunities (also known as isochrones or contour measures), measures count the number of opportunities within a defined catchment area. In contrast to the utility measure, which measures accessibility by the 'net utility' from travel, the cumulative measure represents accessibility with the total number of opportunities. This measure counts both the number of reachable opportunities and the associated travel costs.
+
+
+
+$$
+A_i = \sum_{j = 1}^{J}{\ W_{j} f(c_{ij})}
+$$ {#eq-cumulative-measure}
+
+in a cumulative measure the distance decay function is binary:
+$$
+f(c_{ij} \le \gamma _i) =
+\begin{cases}
+  1 & \text{if } c_{ij} \le \gamma _i \\
+  0 & \text{otherwise}
+\end{cases}
+$$ {#eq-impedance-function_cumulative_accessibility}
+
+In @eq-impedance-function_cumulative_accessibility \gamma is the threshold value. According to this formula, all opportunities located within the \gamma threshold are considered accessible. In addition, f(c) is an indicator function that returns 1 if the logical statement in the function's argument is true (i.e. if the cost of reaching j from i does not exceed the bandwidth parameter value) and 0 otherwise. Other distance-decay functions (for example, inverse distance or negative exponential) generate smoother map patterns [@o2003aggregate], but they require more parameters and introduce distance- (or cost-) discounted schemes that are more difficult to interpret. Previous research has shown that cumulative opportunity measures are highly correlated regardless of the distance-decay function used [@kwan1998], and we ultimately prefer simplicity and interpretability in our accessibility indicator selection.
 
 ##### Distance-based measures
 
@@ -114,15 +137,21 @@ Distance-based measures consider accessibility in terms of proximity, either by 
 
 Distance is considered as the travel impedance and four types of distances are usually used in distance-based accessibility measures: 1) Euclidean distance, that has been mainly used for walkability measures, particularly in health studies [@apparicio2008comparing]. 2) Manhattan distance, 3) shortest network distance [@lundberg2012accessibility; @hochmair2015assessment] 4) shortest network time [@pearce2006neighbourhoods; @paez2012]. As well, there are two different ways for measuring distance, first calculates the distance to the closest facility of each type. The first method calculates the distance from each zone centroid to the closest or the first n closest facilities (e.g. medical centers).and second, calculates the distance to all facilities close by. This approach is based on floating catchment areas that finds the closest facility regardless of distance and measures the distance from each zone centre to the closest or the first n closest different facilities (e.g. medical centres, shopping centres, etc.).
 
-Distance to nearest location is calculated based on (1):
+Distance to nearest location is calculated based on @eq-distance-based-accessibility:
 
 $$
 A ^ {ip} = (d_{ij}) ^ {MIN} _ {j \epsilon L ^ p}
-$$
+$$ {#eq-distance-based-accessibility}
 
 In this equation, $A ^ {ip}$ is accessibility of zone i to location of type p, $L ^ p$ is set of locations of type p, and $(d_{ij})$ is distance (or travel time for a given mode) from i to location j in set $L_𝑝$. This measure is consistent with an extremely simple location model in which the nearest location is always chosen with probability 1.0. (2)
 
-$P ^ {ip} _j = 1$ if $d_{ij_'} = (d_{ij_'}) ^ {MIN} _ {j \epsilon L ^ p}$ ; = 0 otherwise
+$$
+P ^ {ip} _j = 
+\begin{cases}
+ 1 & \text{if } d_{ij} = (d_{ij}) ^ {MIN} _ {j \epsilon L ^ p}\\
+ 0 & \text{otherwise}
+\end{cases}
+$$ {#eq-distance-based-measure}
 
 In equation 2, $P_j^{ip}$ is the probability of choosing location j for purpose p given that one is located in zone i. This measure has two limitations, first, doesn't consider the size/attractiveness of locations and second, doesn't investigate the cumulative effect of multiple accessible locations. So, it is not recommended to calculate accessibility using this method as an independent measure.
 
@@ -142,19 +171,21 @@ Utility-based measure can be calculated using two methods:
 
 $$
 P_j ^ {ip} = \frac{e ^ {V_j}}{\sum_{j'\epsilon L ^ {ip}} e ^ {V_j'}} = \frac{e ^ {\beta z _j}}{\sum_{j'\epsilon L ^ {ip}} e^{\beta z_j}}
-$$
+$$ {#eq-utility-based-measure}
 
 In this equation, ${𝑉_𝑗} = β{Z_j}$: The systematic utility of alternative j; ${Z_j}$ is a Vector of explanatory variables and Β is a (Row) vector of parameters.
 
-2.  The actual perceived maximum utility is unobservable, but, for the case of the MNL model, it can be shown [@ben1985discrete] that the expected maximum utility $(𝐼^{𝑖𝑝})$ associated with this choice is given by:
+2.  The actual perceived maximum utility is unobservable, but, for the case of the MNL model, it can be shown [@ben1985discrete] that the expected maximum utility $(𝐼^{𝑖𝑝})$ associated with this choice is given by @eq-maximum-utility:
 
 $$
-  I ^{𝑖𝑝} = E [MAX _j(U_j)] = \ln(\sum_{j \epsilon L^ {ip}} e ^ (\beta {z_j})
-$$ That is, it is the natural logarithm of the denominator of the logit choice model (sometimes referred to as the "logsum" term). Further, it can also be shown that this expected maximum utility is the consumer's surplus for this choice. Thus it is a standard measure of economic benefit. Given this, Ben-Akiva and Lerman (1985) argue that it also provides a behaviourally and economically sound definition of accessibility: accessibility for a given activity is the expected utility that would be derived from participation in this activity, which is also the consumer surplus associated with this participation. That is:
+I ^{𝑖𝑝} = E [MAX _j(U_j)] = \ln(\sum_{j \epsilon L^ {ip}} e ^ (\beta {z_j})
+$$ {#eq-maximum-utility}
+
+That is, it is the natural logarithm of the denominator of the logit choice model (sometimes referred to as the "logsum" term). Further, it can also be shown that this expected maximum utility is the consumer's surplus for this choice. Thus it is a standard measure of economic benefit. Given this, Ben-Akiva and Lerman (1985) argue that it also provides a behaviorally and economically sound definition of accessibility: accessibility for a given activity is the expected utility that would be derived from participation in this activity, which is also the consumer surplus associated with this participation. That is:
 
 $$
-  A ^ {ip} = \ln (\sum_{j\epsilon L^ {ip}} e ^ (\beta {z_j})
-$$
+A^{p}_i = \ln \Big(\sum_{j\epsilon L^ {ip}} e ^ {\beta {z_j}}\Big)
+$$ {eq-accessibility-maximum-utility}
 
 In the following, Tables 1 and 2 have categorized recent studies based on the accessibility by walking and cycling. However, Vale et al. (2016) found relatively few studies examining cycling-specific accessibility in comparison to walking. For a comprehensive review of all 84 papers on walking and cycling accessibility (published by September 2013) refer to Vale et al. (2016).
 
@@ -347,13 +378,15 @@ In Table 6, each database was examined based on seven data categories.
 
 | Dataset                                                                 | Travel Data | Users Data | Origin-Destination Data | Cycling and Walking data | Spatial data | additional data |
 |-------------------|---------|---------|---------|---------|---------|---------|
-| General social survey (GSS)                                             | Y           | Y          | Y                       | \-                       | \-           | \-              |
-| Transportation Tomorrow Survey (TTS) of Toronto                         | Y           | Y          | Y                       | Y                        | Y            | Y               |
-| Autorité régionale de transport métropolitain (ARTM) survey of Montreal | Y           | Y          | Y                       | Y                        | Y            | Y               |
-| The Linkable Open Data Environment (LODE)                               | \-          | \-         | Y                       | \-                       | \-           | \-              |
-| Can-BICS                                                                | \-          | \-         | \-                      | Y                        | \-           | Stress Level    |
-| open street map                                                         | \-          | \-         | \-                      | Y                        | Y            | \-              |
-| municipal open data                                                     | \-          | \-         | \-                      | Y                        | \-           | \-              |
+| [General social survey (GSS)]()                                             | Y           | Y          | Y                       | \-                       | \-           | \-              |
+| [Transportation Tomorrow Survey (TTS) of Toronto](http://dmg.utoronto.ca/transportation-tomorrow-survey/tts-introduction)                         | Y           | Y          | Y                       | Y                        | Y            | Y               |
+| [Autorité régionale de transport métropolitain (ARTM) survey of Montreal](https://donnees.artm.quebec/depots) | Y           | Y          | Y                       | Y                        | Y            | Y               |
+| [The Linkable Open Data Environment (LODE)](https://www.statcan.gc.ca/en/lode/databases)                               | \-          | \-         | Y                       | \-                       | \-           | \-              |
+| [Can-BICS](https://www.arcgis.com/home/item.html?id=6a15224d9ea347c9898c112f974c47a2)                                                                | \-          | \-         | \-                      | Y                        | \-           | Stress Level    |
+| [open street map](https://www.openstreetmap.org/#map=3/71.34/-96.82)                                                         | \-          | \-         | \-                      | Y                        | Y            | \-              |
+| [Toronto open data](https://open.toronto.ca/catalogue/)                                                     | \-          | \-         | \-                      | Y                        | \-           | \-              |
+| [Vancouver open data](https://vancouver.ca/streets-transportation/walk-bike-and-transit.aspx)                                                     | \-          | \-         | \-                      | Y                        | \-           | \-              |
+| [Montreal open data](https://montreal.ca/en/articles/open-data-window-municipal-arena-32256)                                                     | \-          | \-         | \-                      | Y                        | \-           | \-              |
 
 : **Table 6.** Availability of datasets {tbl-colwidths="\[75,25\]"}
 
