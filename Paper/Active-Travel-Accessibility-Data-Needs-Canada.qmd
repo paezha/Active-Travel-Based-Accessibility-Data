@@ -1,6 +1,6 @@
 ---
-title: "Data-Needs-Report"
-author: "MM"
+title: "Data Sources and Needs for Active Travel-Based Accessibility Analysis: A Canadian Perspective"
+author: "Mahdis Moghadasi, Jeneva Beairsto, Meghan Winters, Antonio Paez"
 format:
   docx:
     reference-doc: custom-reference-doc.docx
