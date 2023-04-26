@@ -1,0 +1,219 @@
+---
+title: "Data needs and sources"
+author: "MM"
+format:
+  docx:
+    reference-doc: custom-reference-doc.docx
+editor: source
+bibliography: references.bib
+---
+
+
+
+#  General social survey (GSS)
+
+The General Social Survey (GSS) is conducting every 5 years. This survey started in 1868 and continued until 2020. However, the information related to the 2020 census has not been released yet. This survey monitors changes in time use to better understand how Canadians spend and manage their time. This dataset contains travel time data for people in many of the Census Metropolitan Areas (CMAs) and non-CMA areas all over Canada. CMAs are including St. John's, Halifax, Saint John, Montreal, Quebec City, Toronto, Ottawa, Hamilton, Winnipeg, Regina, Saskatoon, Calgary, Edmonton, and Vancouver. and the non-CMA areas of each of the ten provinces were also grouped to form ten more strata. 
+
+Based on the categories of data mentioned above, this database includes the following data:
+
+* Travel data (trips)
+Travel data provides information about the trips, including the mode of travel, duration of travel, and trip origins and destinations. This dataset contains 301 bicycle and 4236 walking trips in 2015. Each trip contains pumID, start time, end time, duration, origin and destination.
+
+* Users data (Socio-economic and personal data)
+
+Demographic variables of pedestrian and cycling users including age, gender, and the number of households can be obtained from this Survey.
+
+* Origin- destination data
+
+In the GSS database, different travel destinations and locations are considered and each location is identified with a specific code, as follows: home or on the property, someone else's home or property, work or school, in the neighbourhood, Outdoors, Grocery store, other stores or mall, Library, museum or theatres, Sports center, field or arena, Restaurant, bar or club, Place of worship, medical, dental or another health clinic, and Elsewhere.
+
+#  Transportation Tomorrow Survey (TTS) survey
+
+The Transportation Tomorrow Survey (TTS) is a cooperative effort by local and provincial government agencies to collect information about urban travel in southern Ontario. The survey has been undertaken every five years since 1986. The data collected helps local and regional governments, as well as the province and its agencies make informed transportation decisions on future planning and investment for roads, public transit, and other transportation facilities. The data collected from this survey will provide a better understanding of how members of a household interact with the transportation system. This understanding will help plan improvements to roadways and transportation facilities for drivers, cyclists, pedestrians, and public transit users as your area grows.
+
+The Transportation Tomorrow Survey (TTS) is a comprehensive survey that gathers information about how and where people travel. The survey aims to gather detailed information about the travel patterns of households and individuals. 
+
+This Survey was conducted on behalf of 22 local, regional, provincial and transit operating agencies in Greater Toronto and surrounding regions. the TTS database for the city of Toronto includes Travel data (e.g., mode, trip length), personal data (e.g., age, gender), household data (e.g., number of persons, income), and transit data (e.g., access distance, access mode to transit)
+
+The information collected through the TTS provides valuable insights into travel patterns in a given region. It can help transportation planners and policymakers better understand the needs of travelers and make informed decisions about transportation infrastructure and services. By analyzing the data collected through the TTS, planners can identify trends and patterns in travel behavior, such as the most popular modes of transportation and the busiest travel times, and use this information to develop more effective transportation policies and programs.
+
+
+
+* Travel data (trips)
+
+This dataset contains different trips such as bus, car, bicycle, walk, etc. and each trips include different criteria such as start time, mode of transportation, origins, destinations, etc.
+
+* Users data (Socio-economic and personal data)
+
+It includes questions about household demographics, such as the number of people in the household and their age and income levels.
+
+* Origin- destination data
+
+TTS asks about the types of trips made by each person in the household. This includes where the person traveled, when they traveled to this location, and the purpose of the trip. For example, the survey asks if the trip was for work, school, shopping, or leisure.
+
+# Autorité régionale de transport métropolitain (ARTM) survey
+
+The Regional Metropolitan Transport Authority (ARTM) has initiated the Origin-Destination survey, marking the first time since its establishment. This survey has been conducted every five years since 1970 and is considered one of the most significant transportation studies in Quebec. It aims to gather reliable and comprehensive information about the movement of people in the greater metropolitan area of Montreal by various modes of transportation such as walking, cycling, bus, metro, train, and car. The study provides valuable insights for the better planning of public transport and road networks, as well as for improving urban development plans for the greater Montreal region.
+
+the Autorité régionale de transport métropolitain (ARTM) is an origin-destination survey and one of the most critical transportation studies in Quebec that has been carried out every five years since 1970. Data are collected for each household (home location, size, number of cars), **each person in the household** (age, gender, driving license ownership, main occupation, public transit monthly pass ownership), and **each trip** made by each person of 5 years and older (departure time, origin and destination locations, trip purpose, mode sequence, and others).
+
+
+# The Linkable Open Data Environment (LOD)
+
+the Linkable Open Data Environment (LODE) is an exploratory initiative that aims at enhancing the use and harmonization of open microdata primarily from municipal, provincial and federal sources. It has been compiled by the Centre for Special Business Projects (CSBP) at Statistics Canada in 2020. 
+
+This database includes variables such as address, postal code, city, province and latitude and longitude of each facility and includes a Canada-wide Open Database of educational facilities (this database covers facilities such as ***early childhood education, kindergarten, elementary, secondary, and post-secondary institutions***, and ***specific vocational training centers***. The database does not include virtual educational institutions.), healthcare facilities (including ambulatory health care services, hospitals, and nursing and residential care facilities), cultural and art facilities (such as arts or cultural centers, artists, festival sites, galleries, heritage or historic site, library or archive, museum, theatre/performance and concert hall, and miscellaneous), and recreational and sports facilities (including trails(such as urban and rural trails or pathways for walking, hiking, or biking), sports fields, arenas (facilities where sports and/or recreational activities take place), athletic parks, beaches, casinos, community centers, gyms, marinas, parks and green spaces, playgrounds, pools, race tracks, ice rinks, skate parks, splash pads, stadiums, miscellaneous), and Businesses (this database contains addresses of business, name, type of business and locations).
+
+
+* The Open Database of Buildings (@https://www.statcan.gc.ca/en/lode/databases/odb)
+
+The inputs for the ODB are datasets provided by municipal, regional or provincial sources available to the general public through open government portals under various types of open data licenses. The current version of the database (version 2.0) contains approximately 4.4 million records and includes provinces and territories where open building footprints were found during the collection period.Within the original datasets, each data provider attached a different set of variables to their building footprints.The variables included in the ODB are as follows:Latitude,Longitude,Area,Perimeter, Data provider, Census subdivision unique identifier, Census subdivision, name, Unique building ID 
+
+* The Open Database of Educational Facilities (@https://www.statcan.gc.ca/en/lode/databases/odef)
+
+The Open Database of Educational Facilities (ODEF) is a collection of open data containing the names, types, and locations of education facilities across Canada, and is made available under the Open Government Licence - Canada.The inputs for the ODEF are primarily datasets provided by municipal, regional or provincial sources available to the general public through open government portals under various types of open data licences, or otherwise published on their webpages and released under an open licence with their permission.The variables included in the ODEF are as follows: Facility Name, Facility Type, Authority Name, International Standard Classification of Education (ISCED) ,Level, Official Language Minority School Status, Address, Unit, Street Number, Street Name, Municipality Name, Province, Postal Code, Province Unique Identifier, Census Subdivision Name, Census Subdivision Unique Identifier, Census Metropolitan Area Name, Census Metropolitan Area Unique Identifier, Longitude, Latitude, Geocoding Source, Source ID, Unique ID.
+
+* The Open Database of Healthcare Facilities (@https://www.statcan.gc.ca/en/lode/databases/odhf)
+
+The inputs for the ODHF are datasets whose sources include regional health authorities, provincial, territorial and municipal governments, and public healthcare and professional healthcare bodies. These datasets were available either under one of the various types of open data licences, e.g., in an open government portal, or as publicly available data. In certain cases, data were obtained directly from administrative sources. Details of the sources used are available in the ODHF metadata. This dataset includes ambulatory health care services, hospitals, and nursing and residential care facilities.The variables included in the ODHF are as follows: Index, Facility Name, Source Facility, Type, ODHF Facility Type, Provider, Unit, Street Number, Street Name, Postal Code, City, Province or Territory , Source-Format Street Address, Census Subdivision Name, Census Subdivision Unique Identifier, Province or Territory Unique Identifier, , Latitude ,Longitude.
+
+* The Open Database of Cultural and Art Facilities (@https://www.statcan.gc.ca/en/lode/databases/odcaf)
+
+The Open Database of Cultural and Art Facilities (ODCAF) is a collection of open data containing the names, types, and locations of cultural and art facilities across Canada.This dataset includes arts or cultural centers, artists, festival sites, galleries, heritage or historic site, library or archive, museum, theatre/performance and concert hall, and miscellaneous. 
+
+
+* The Open Database of Recreational and Sport Facilities (@https://www.statcan.gc.ca/en/lode/databases/odrsf)
+
+The Open Database of Recreational and Sport Facilities (ODRSF) is a collection of open data containing the names, types, and locations of recreational and sport facilities across Canada. recreational and sports facilities includes trails(such as urban and rural trails or pathways for walking, hiking, or biking), sports fields, arenas (facilities where sports and/or recreational activities take place), athletic parks, beaches, casinos, community centers, gyms, marinas, parks and green spaces, playgrounds, pools, race tracks, ice rinks, skate parks, splash pads, stadiums, miscellaneous).
+
+* The Open Database of Businesses
+
+The Open Database of Businesses contains addresses of business name and locations. It also includes information on the type of business and legal nature of business, when supplied by the data providers.
+
+* The Open Database of Infrastructures
+
+The Open Database of Infrastructure contains the name and location of major transport and physical infrastructures such as airports, railway stations, bridges and elevated roads, etc. Infrastructures are classified by type. Records are compiled from both open sources and from publicly available data (with permission from the data owners).
+
+# Can-BICS
+
+* Cycling and walking networks
+
+Can-BICS is a classification system of five broad bicycle facilities assigned to three categories: high, medium, and low comfort, based on the facility's contribution to user safety and comfort while cycling. 1) High comfort includes low-stress routes that are comfortable for most people, including those of all ages and abilities, with a record for best safety. for example, cycle track, local street bikeway, and bike path. 2) medium comfort is low- or medium-stress routes that are comfortable for some people, but whose safety requires careful design, such as multi-use paths (A two-way paved path shared by cyclists, pedestrians and other users). 3) low comfort bikeways are high-stress routes that are comfortable for few people, with little or no additional safety, compared to no bicycle facility, such as painted bike lanes that are designated by bicycle and diamond pavement markings and signs as exclusively for cyclists. And 4) non-conforming bicycle facilities do not meet minimum Can-BICS standards, such as non-conforming - trail (these are multi-use trails with unpaved surface), non-conforming -- major road (shared lanes on major roads provide connectivity), and non-conforming - other.
+
+
+
+
+# OpenStreetMap (OSM)
+
+* Cycling and walking networks
+
+Another source for obtaining cycling and walking networks is OpenStreetMap (OSM). This dataset is a collaborative global map that using for active transportation researches. OSM considered cycle lanes, tracks and sidewalks. A cycle lane lies within the roadway itself (on-road), whereas a cycle track is separate from the road (off-road). Tracks are typically separated from the road by e.g. curbs, parking lots, grass verges, trees, etc. as well, trails line that indicates the paths or routes suitable for walking, hiking, bicycling, and other outdoor activities from 2015 to 2019 can be obtained from scholars Geoportal.
+
+
+
+# Municipal open data
+
+Municipal open data is a standard source of bicycling infrastructure data that city governments are making this spatial data for bicycling infrastructure. In Canada, some cities have this dataset such as Toronto, Montreal, Vancouver, etc. However, open data of different cities use different definitions for bicycling infrastructure, and they may have different levels of timeliness, completeness, and documentation [@schoner2014missing]. For example, bicycle facilities the City of Toronto Open Data portal consists of a high-resolution geospatial data set with attributes accumulated from several sources of cycle tracks or bike lanes, road classification (local, collector, minor arterial, etc.), number of lanes, directions, stop signs and signalized intersections. (City of Toronto, 2017).
+
+## City of Toronto
+
+**Cycling Network**
+
+The Toronto bikeways dataset illustrates the existing cycling network across the city, including both shared and dedicated bikeways. The Toronto bikeways dataset contains the following types of bikeways: cycle tracks, bicycle lanes (including buffered bike lanes and contra-flow bike lanes), neighbourhood routes with sharrows (including wayfinding sharrows), multi-use trails (including off-road and in-boulevard), as well as signed cycling routes.
+
+**Property Boundaries**
+
+This data is a GIS file that outlines the geographical area of all properties in the City of Toronto. While every attempt is made to keep this dataset up to date, it has been compiled over many years, from numerous records of varying age and reliability. As such, the resulting accuracy of the boundary mapping information renders it suitable for general planning purposes only and is not a substitute for a plan of survey.
+
+**Pedestrian Network**
+
+The Pedestrian Network (pednet) was created by the DAV team at the City of Toronto, and it is based on the sidewalk inventory from Transportation Services, Toronto road centrelines, and manual collection from aerial imagery. Pednet is integrated with centerline intersections, traffic signals, pedestrian crosswalks and crossovers, traffic signal data from Transportation Services as well as other City of Toronto datasets.
+
+
+## City of Hamilton
+
+**Recreational Pathways**
+
+Pathway is defined as: land dedicated to pathway use, pathway is mapped, signage exists, and have a recreational purpose. Pathways may support a range of non-motorized recreational uses such as walking, hiking, and bicycling. It includes the length (kilometers) of all paved and unpaved maintained recreational pathways that fall under municipal responsibility or control and if the municipality incurs costs to maintain those pathways. This data excludes non developed footpaths, sidewalks, and pathways that link to roadways and does not include unpaved trails maintained by others, such as the Bruce Trail and other similar trail systems.
+
+**Trails**
+This dataset includes location of recreational trails that are either owned or maintained by City of Hamilton, includes both walking/hiking trails and off-street bikeways. Types include:
+
+Multi-Use Path
+Paved Multi-Use Recreational Trail
+Unpaved (Stone) Multi-Use Recreational Trail
+Stairs (with or without Bicycle troughs)
+Trail/Cycling Networks (Trans Canada, Waterfront, others)
+
+**Census Population, Age and Gender**
+
+In the 2021 Census, Statistics Canada introduced the concept of gender. Given that the non-binary population is small, data aggregation to a two-category gender variable was necessary to protect the confidentiality of responses provided. In these cases, individuals in the category “non-binary persons” are distributed into the other two gender categories and are denoted by the “+” symbol.
+
+Data is derived from custom tabulations of Statistic Canada’s Census obtained by the City of Hamilton as a consortium member of the Canadian Community Economic Development Network (CCEDNet) Community Data Program.
+
+**Housing Placements**
+
+Housing Placements depicted are the initial occurrence that housing has been secured for unique individuals participating in a City-funded homelessness program: Intensive Case Management (ICM), Rapid Re-housing (RRH), and Transitional Living Program (TLP).
+
+## City of Vancouver
+
+**Bikeways** (@https://opendata.vancouver.ca/explore/dataset/bikeways/information/?disjunctive.bike_route_name&disjunctive.bikeway_type&disjunctive.subtype&disjunctive.year_of_construction)
+
+This dataset contains information about bikeways in City of Vancouver. These bikeways follow street centrelines so their placement in the street right of way is approximate. This dataset is maintained manually.This dataset includes data on shorter bikeway segments which can be different than how the bikeways are dispayed in the Vancouver Cycling Map. 
+
+**Property addresses**
+
+The property addresses dataset contains addresses used for parcel polygon display. Please note: these addresses are the primary addresses displayed in VanMap and do not represent a complete set of all addresses. Some addresses are duplicated because they appear more than once on VanMap.
+
+**Property parcel polygons**
+
+The property parcel polygons are assessment based land polygons. 
+
+## City of Halifax
+
+**Bike Infrastructure and Suggested Routes**
+
+Line representation of existing and suggested bike routes and infrastructure within the Halifax Regional Municipality. This dataset includes Bike Facility ID, Bike Facility Type, Bike Facility Name, Street Name, Bike Facility Implementation, Pilot Project or Permanent, One Side Only, Direction, Install Year,Physical Protection.
+
+**Active Travelways**
+
+Active Travelways is a Linear representation of assets that includes trails, sidewalks, walkways, pathways and Multi-Use Pathways.
+
+**Zoning Boundaries 2021**
+
+ Land use zone applied to a particular area of land within a land use by-law (LUB) area. The zone value of each polygon corresponds with a zone in the associated land use by-law, which lists permitted or prohibited uses for each zone.
+
+Land use zones differ between LUB areas, so each zone must be interpreted within the context of the LUB area in which it is applied. Complete information for each land use by-law is available from HRM Development Approvals.
+
+## City Of Waterloo (@https://rowopendata-rmw.opendata.arcgis.com/)
+
+**Active Transportation**
+
+Active Transportation represents active transportation infrastructure includes: cycling, sidewalks, walkways and pathways (trails).
+
+**Trail and Sidewalk Clearing**
+
+This dataset provides Sidewalks and Trails plowed or shovelled by the City.
+
+**Walkability**
+
+This dataset is a combination of sidewalks, trails and links forming a continuous network. To be used in conjunction with the road network. Walkability is a measure of how accommodating the built environment is to walking. This dataset is a work-in-progress and will be updated as new information becomes available.
+
+**Uptown BIA Boundary**
+
+The 'Business Improvement Area' boundary represents the properties in the Uptown Waterloo area that contribute a levy to the association in order to be a part of a cohesive marketing strategy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
