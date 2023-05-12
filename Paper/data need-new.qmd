@@ -8,11 +8,39 @@ editor: source
 bibliography: references.bib
 ---
 
+As previously stated, the computation of accessibility metrics requires data pertaining to six distinct categories. These data sets are essential to calculate the accessibility measures accurately. Canada boasts a plethora of data sources, ranging from national to regional and urban levels, which provide the necessary data required for the calculation of accessibility measures. One of the existing data sources that can be utilized for data needs is the household travel survey, which has been conducted in various regions throughout Canada. This survey provides access to relevant data pertaining to travel, users, and origin-destination, which are essential for calculating accessibility measures accurately. The household travel survey is a valuable resource for transportation planners, policymakers, and researchers who seek to gain a comprehensive understanding of travel behavior patterns and the factors that influence them. In a household travel survey, several variables are collected such as household levels, person level for each person in the household, and trip level for each trip made by each household member. The General Social Survey (GSS) is another data source that can be utilized at the national level to extract information on travel behavior. The GSS is a comprehensive survey that collects data on a range of topics, including transportation and travel patterns, social trends, and attitudes. The survey is conducted regularly by Statistics Canada.
+
+
+The following is an overview of the categories of data that are obtained through the households travel surveys:
+
+
+\`
+
+Table 6, shows various data in Household travel survey.
+
+|       **household levels**       	|                     **person level**                     	|                    **trip level**                   	|
+|:--------------------------------:	|:--------------------------------------------------------:	|:---------------------------------------------------:	|
+| Home location                    	| Gender                                                   	| Origin location                                     	|
+| Dwelling type                    	| Age                                                      	| Destination location                                	|
+| Household size (# people)        	| Driver’s licence                                         	| Trip departure time (start and end time)            	|
+| Number of vehicles               	| Transit pass                                             	| Purpose of travel (destination activity)            	|
+| Number of bicycles               	| Student status                                           	| Mode(s) of travel (up to 5)                         	|
+| Household income                 	| School level                                             	| Number of vehicle occupants (if driver or passenger 	|
+| Home parking (#off-street spots) 	| School location                                          	|                                                     	|
+|                                  	| Employment status                                        	|                                                     	|
+|                                  	| Workplace location                                       	|                                                     	|
+|                                  	| Parking at work and school(free or pay)                  	|                                                     	|
+|                                  	| Other occupational status                                	|                                                     	|
+|                                  	| Location of residence                                    	|                                                     	|
+|                                  	| Frequency of cycling, walking, and other active mode use 	|                                                     	|
+
 
 
 #  General social survey (GSS)
 
-The General Social Survey (GSS) is conducting every 5 years. This survey started in 1868 and continued until 2020. However, the information related to the 2020 census has not been released yet. This survey monitors changes in time use to better understand how Canadians spend and manage their time. This dataset contains travel time data for people in many of the Census Metropolitan Areas (CMAs) and non-CMA areas all over Canada. CMAs are including St. John's, Halifax, Saint John, Montreal, Quebec City, Toronto, Ottawa, Hamilton, Winnipeg, Regina, Saskatoon, Calgary, Edmonton, and Vancouver. and the non-CMA areas of each of the ten provinces were also grouped to form ten more strata. 
+The General Social Survey (GSS) is a ***national*** survey conducted by Statistics Canada that collects information on the social trends and attitudes of Canadians. The survey has been conducted since 1985 and is conducted every two years, making it one of the longest-running surveys of its kind in Canada. This Survey (GSS) in Canada covers a wide range of topics related to social trends and attitudes. Some of the major topics covered by the survey include:Social well-being, Health, Education, Work, Family, Social networks, Crime and justice, and Time use. The survey is designed to provide a snapshot of social trends and attitudes in Canada, and is used by researchers, policy-makers, and the general public to gain a better understanding of the social issues facing Canadians.
+
+The Time Use Survey is a component of the General Social Survey (GSS) that has been conducted since 1986.This survey is conducting every 5 years (1986, 1992, 1998, 2005, and 2015) and continued until 2020. However, the information related to the 2020 census has not been released yet. So, The most recent survey was released in 2015. It is designed to provide information on how Canadians allocate their time on a daily basis activities such as paid work, household chores, leisure activities, caregiving activities, and travel trips. Time Use Survey collects data on how individuals travel from one location to another during their daily activities. This includes modes of transportation such as walking, cycling, driving, and taking public transit.The survey collects information on the start and end time of each trip, the mode of transportation used, the purpose of the trip (e.g. work, shopping, leisure), and the distance traveled. In addition, This dataset contains travel time data for people in many of the Census Metropolitan Areas (CMAs) and non-CMA areas all over Canada. CMAs are including St. John's, Halifax, Saint John, Montreal, Quebec City, Toronto, Ottawa, Hamilton, Winnipeg, Regina, Saskatoon, Calgary, Edmonton, and Vancouver. and the non-CMA areas of each of the ten provinces were also grouped to form ten more strata.The survey also collects information on the characteristics of individuals and their households such as age, sex, education, employment status, family composition, and income. 
 
 Based on the categories of data mentioned above, this database includes the following data:
 
@@ -27,35 +55,172 @@ Demographic variables of pedestrian and cycling users including age, gender, and
 
 In the GSS database, different travel destinations and locations are considered and each location is identified with a specific code, as follows: home or on the property, someone else's home or property, work or school, in the neighbourhood, Outdoors, Grocery store, other stores or mall, Library, museum or theatres, Sports center, field or arena, Restaurant, bar or club, Place of worship, medical, dental or another health clinic, and Elsewhere.
 
-#  Transportation Tomorrow Survey (TTS) survey
+#  Transportation Tomorrow Survey survey (TTS)
 
-The Transportation Tomorrow Survey (TTS) is a cooperative effort by local and provincial government agencies to collect information about urban travel in southern Ontario. The survey has been undertaken every five years since 1986. The data collected helps local and regional governments, as well as the province and its agencies make informed transportation decisions on future planning and investment for roads, public transit, and other transportation facilities. The data collected from this survey will provide a better understanding of how members of a household interact with the transportation system. This understanding will help plan improvements to roadways and transportation facilities for drivers, cyclists, pedestrians, and public transit users as your area grows.
 
-The Transportation Tomorrow Survey (TTS) is a comprehensive survey that gathers information about how and where people travel. The survey aims to gather detailed information about the travel patterns of households and individuals. 
+The Transportation Tomorrow Survey (TTS) is a comprehensive survey (a series of population-based cross sectional travel surveys) that gathers information about how and where people travel. The survey aims to gather detailed information about the travel patterns of households and individuals.Since 1986, the Greater Toronto Area (GTA) has been implementing the Transportation Tomorrow Survey (TTS) program  every five years, which has proven to be a highly effective means of collecting data on travel behavior. The Transportation Tomorrow Survey (TTS) are parts of an ongoing data collection program by the Transportation Information Steering Committee (TISC). The survey data (2016, 2011, 2006, 2001, 1996, 1991 and 1986) are currently under the care of the Data Management Group. This group is responsible for maintaining the TTS databases and making available appropriate travel information for any urban transportation study in the area.
 
-This Survey was conducted on behalf of 22 local, regional, provincial and transit operating agencies in Greater Toronto and surrounding regions. the TTS database for the city of Toronto includes Travel data (e.g., mode, trip length), personal data (e.g., age, gender), household data (e.g., number of persons, income), and transit data (e.g., access distance, access mode to transit)
+In 1986, the survey covered the Greater Toronto and Hamilton Area (GTHA), which included the Municipality of Metropolitan Toronto and the Regional Municipalities of Durham, York, Peel, Halton, and Hamilton. In 1991, the survey area was expanded to include the municipalities adjacent to the GTHA boundary, known as the 'fringe area.' The 1996 survey included all of the GTHA, plus several additional regions, including Peterborough County, City of Peterborough, Victoria County, Town of Orangeville, Simcoe County, City of Barrie, Wellington County, City of Guelph, Waterloo Region, and Niagara Region. In 2001, the survey area changed again, with the addition of the whole of Simcoe County, the City of Orillia, and the exclusion of the Regional Municipality of Waterloo and Northumberland County. The 2006 survey area included the Regional Municipality of Waterloo, the City of Brantford, and Dufferin County, with interviews conducted in Brant County during interviewer training. The survey area in the 2011 and 2016 TTS was the same as in 2006, with the inclusion of Brant County.
 
+
+TTS database includes ***Household attributes*** (such as Regional municipality of household, geocode of household, UTM X and Y coordinate of the household, Type of dwelling unit, Number of persons in the household, Day of week trip data, Number of vehicles, Number of persons possessing a driver’s licence in the household, Number of full or part time workers in the household, Number of full or part time students in the household, Number of household trips on trip day, and Household’s total income), ***Person attributes*** (such as person number within the household, age, gender, possession of a driver’s licence, possession of a transit pass, employment status of the person, person’s occupation type, student status of person, school codes (Starting from 2001), regional/Local municipality of person’s usual place of work, UTM X and Y coordinate of person’s usual place of work, geocode person’s usual place of work, number of trips made by the individual on trip day, and number of trips made by individual on trip day with primary mode being public transit), ***Trip attributes*** (such as trip number for persons in household, start time of the trip, Primary mode of the trip (public transit, bicycle and walking), purpose of the trip (home-based work
+(i.e. home-to-work or work-to-home), home-based-school, home-based-discretionary, non-Home-based), origin purpose of the trip, Regional municipality of trip origin, planning district of trip origin, 2001 and 2006 traffic zone of trip origin, UTM X and Y coordinate of trip origin, Method used to geocode trip origin, destination purpose of the trip (second and subsequent school trips, daycare (not in 1986), entertainment (1986 only), facilitate passenger, home, linked trip (1991 only), marketing/ Shopping (not in 1991), second and subsequent work trips, first school trip of the day, first work trip of the day and others), regional municipality of trip destination, planning district of trip destination, 2001 and 2006 traffic zone of trip destination, UTM X and Y coordinate of trip destination, method used to geocode trip destination, straight line trip length in kilometres, manhattan distance trip length in kilometres).
+
+ 
 The information collected through the TTS provides valuable insights into travel patterns in a given region. It can help transportation planners and policymakers better understand the needs of travelers and make informed decisions about transportation infrastructure and services. By analyzing the data collected through the TTS, planners can identify trends and patterns in travel behavior, such as the most popular modes of transportation and the busiest travel times, and use this information to develop more effective transportation policies and programs.
 
 
-
-* Travel data (trips)
-
-This dataset contains different trips such as bus, car, bicycle, walk, etc. and each trips include different criteria such as start time, mode of transportation, origins, destinations, etc.
-
-* Users data (Socio-economic and personal data)
-
-It includes questions about household demographics, such as the number of people in the household and their age and income levels.
-
-* Origin- destination data
-
-TTS asks about the types of trips made by each person in the household. This includes where the person traveled, when they traveled to this location, and the purpose of the trip. For example, the survey asks if the trip was for work, school, shopping, or leisure.
-
 # Autorité régionale de transport métropolitain (ARTM) survey
 
-The Regional Metropolitan Transport Authority (ARTM) has initiated the Origin-Destination survey, marking the first time since its establishment. This survey has been conducted every five years since 1970 and is considered one of the most significant transportation studies in Quebec. It aims to gather reliable and comprehensive information about the movement of people in the greater metropolitan area of Montreal by various modes of transportation such as walking, cycling, bus, metro, train, and car. The study provides valuable insights for the better planning of public transport and road networks, as well as for improving urban development plans for the greater Montreal region.
+The Montreal OD (Origin-Destination) survey is a large-scale cross-sectional household travel survey conducted every five years since 1970 in the Montreal metropolitan area (1970, 1974, 1978, 1982,1987, 1993, 1998, 2003, 2008, 2013, and 2018). The survey covers 5% of the population residing in the Montreal metropolitan area and is conducted by the Autorité Régionale de Transport Métropolitain (ARTM).
 
-the Autorité régionale de transport métropolitain (ARTM) is an origin-destination survey and one of the most critical transportation studies in Quebec that has been carried out every five years since 1970. Data are collected for each household (home location, size, number of cars), **each person in the household** (age, gender, driving license ownership, main occupation, public transit monthly pass ownership), and **each trip** made by each person of 5 years and older (departure time, origin and destination locations, trip purpose, mode sequence, and others).
+Its purpose is to provide an accurate picture of all the trips made by residents of the region during an average weekday, for all modes of transportation used such as walking, cycling, bus, metro, train, and car. . They are descriptive surveys that provide a statistical portrait of the different characteristics of people's trips. For each documented trip, the surveys identify the origin, destination, purpose, departure time, and all the different modes of transport used. Other socio-demographic variables are also collected. This is primarily a survey conducted through telephone interviews that aims to provide a general overview of all trips made by residents of the region, regardless of the mode of transport used. For the first time, the 2018 OD survey included a web questionnaire component.In addition, this survey cover an increasingly larger territory that spans the entire metropolitan region, from the major cities of Montreal, Laval, and Longueuil, to the north and south crowns.
+
+
+The survey collects detailed information on each trip made by all individuals in ***each surveyed household*** (such as home location, size,vehicle ownership, and number of cars), **each person in the household** (age, gender,income,education level, driving license ownership, main occupation, public transit monthly pass ownership), and **each trip** made by each person of 5 years and older ( such as departure time, origin and destination locations, trip purpose, mode sequence, and others).
+
+
+# Vancouver panel survey (VTS) [@https://vancouver.ca/streets-transportation/annual-transportation-survey.aspx]
+
+The 2020 Vancouver Panel Survey is a longitudinal survey of households living in the city of Vancouver, British Columbia, Canada (Vancouver’s nine transportation zones). The survey is conducted annually, and its primary goal is to provide a comprehensive picture of travel behavior and trends over time, as well as the impact of policies and interventions on these trends.The primary component of this survey is a travel diary in which individuals record the details of the trips that they make on an assigned weekday. This trip data is then compared to the previous panel surveys conducted from 2013 to 2019, allowing analysis of transportation trends.
+
+The survey collects detailed information on personal and household characteristics, including age, gender, income, education, and employment status. It also gathers information on travel behavior, including trip purpose (such as work, school, recreational/social/entertainment, home, work business trip, shopping, personal business, restaurant, drop off/pick up, and drive someone ), mode of transportation (Auto, transit,cycling, walking, and other), travel distance,start time for each of their recorded trips, travel time ,trip rates, VKT, origin-destination patterns (The daily origin and destination (O-D) patterns for Vancouver residents based on geocoded trip-end coordinates), average trip distances (Trip lengths were estimated using the distance matrix from TransLink’s Regional Transportation Model’s shortest distance assignment) and trip frequency.
+
+One of the unique features of the survey is the collection of data on active transportation, such as walking and cycling. This data is used to evaluate the effectiveness of policies and interventions aimed at promoting sustainable transportation modes.
+
+In addition to travel behavior and personal characteristics, the survey also collects information on attitudes and perceptions related to transportation and the built environment. This information is used to inform policies and interventions aimed at improving transportation options and promoting sustainable and healthy communities.
+
+
+
+# Origin- Destination survey of National Capital Region (@http://www.ncr-trans-rcn.ca/surveys/o-d-survey/)
+
+The Origin-Destination (OD) survey of National Capital Region (NCR) in Canada is a comprehensive travel survey that aims to gather detailed information on the travel behavior of residents in the region. This survey has been conducted in the years 1986, 1995, 2005 and 2011, and it is currently being conducted again in 2022.The Origin-Destination (O-D) Survey examines the “who, where, why, when, and how” of trips made by residents of the National Capital Region (NCR) resulting in extensive, up-to-date information on current daily trip patterns of area residents in rural areas, growing suburbs, mature neighbourhoods and downtown areas alike. The survey is a joint project of the TRANS Committee, made up of the National Capital Commission, the City of Ottawa, the City of Gatineau, the Ontario and Quebec Ministries of Transportation, and the transit agencies of Ottawa and Gatineau.
+
+Total trip numbers account for the population of age 5 and older for the 2011 O-D survey and age 11 and older for the 2005 O-D survey. In addition, The survey did not capture commercial trips or trips generated outside of the National Capital Region. The survey is designed to capture all trips made by residents in the NCR, including the trip origin and destination (includes different districts in this region such as Ottawa Inner Area, Ottawa West, Merivale, Ottawa East, Alta Vista), purpose (such as home, work, school, shopping, leisure, personal and others(include visiting friends and family, health-related trips, and other), and pick up or drop off), time of travel, distance of travel, and mode of transportation. The survey covers a wide range of transportation modes, such as walking, cycling, public transit, and driving.
+
+The survey also collects personal and household information such as age, gender, income, education, household size, driver’s licence, household vehicle availability and employment status. These variables are used to understand how travel behavior varies by demographic groups and to identify potential disparities in access to transportation.
+
+
+
+#  Origin- Destination survey of Capital Regional District (CRD) (@https://www.crd.bc.ca/project/regional-transportation/origin-destination-household-travel)
+
+The Capital Regional District (CRD) conducted a comprehensive trip diary (origin-destination, or O-D) survey. The survey profiles residents’ travel behavior. The profile will aid the CRD in its Regional Growth Strategy, the Regional Transportation Plan, and other ongoing sustainable planning initiatives. The 2017 survey updates surveys that were conducted in 2011, 2006, and 2001.
+
+The 2017 study area of the survey consisted of all 13 incorporated municipalities in the CRD, the Juan de Fuca Electoral Area and Salt Spring Island. Most of the reporting described below covers the 13 incorporated municipalities and the Juan de Fuca Electoral Area: this area corresponds to the area that is covered by the Regional Growth Strategy and is defined as the “Regional Planning Area” (RPA). Households from Salt Spring Island were included in order to build a better picture of travel between these regions and the RPA, and of the travel patterns of Salt Spring Island residents. The Southern Gulf Islands and the CVRD were not included.
+
+
+Demographic variables
+
+The demographics of the RPA’s residents are important indicators of travel. The key factors are population (trips are made by people), households (members of households coordinate their trips includes households size, age, employment,  type of dwelling ) and the vehicle available to each household. 
+
+Travel variables
+
+The survey collects information on trip origins and destinations, travel modes used, trip purposes (such as Work / work-related, Post-secondary school , School, Personal business , Recreation / social , Dining / restaurant, Shopping, Pick-up / drop-off passengers, home, and others), and the time of day that trips are taken
+
+
+#  Origin- Destination survey of Nanaimo City
+
+The City of Nanaimo recently initiated the Nanaimo Transportation Master Plan (NTMP) process. In preparation for the development of the NTMP, the City undertook a Pre-Plan Consultation Process in 2011, which included open houses and surveys to identify key themes and priorities to be considered during the development of the NTMP.
+
+The Origin-Destination (OD) survey of Nanaimo City collects data on daily travel patterns of residents and visitors in the city. The survey covers a wide range of travel-related information, including the purpose of the trip (Commute, Exercise, Recreation, Shopping/Errands and others), mode of transportation, trip distance, trip duration, and demographics of the travelers.
+
+The survey provides detailed information on the different modes of transportation used by travelers, including driving, walking, cycling, and public transit. It also documents the frequency and duration of each mode of transportation, as well as the distance traveled.
+
+In addition to travel-related data, the survey also collects information on demographic factors such as age, gender, education level, income, and employment status. This data provides insights into how different groups of people travel within the city and helps identify any disparities in transportation access and mobility.
+
+
+# Edmonton and  Region Household  Travel Survey (ERHTS)[@https://www.edmonton.ca/transportation/traffic_reports/travel-pattern-analysis]
+
+The Edmonton and Region Household Travel Survey (ERHTS) is a comprehensive travel survey conducted in the Edmonton Metropolitan Region, Alberta, Canada in 1994, 2005 and 2015.The ERHTS was conducted using a combination of online and paper-based surveys, with participants randomly selected from over 46,000 residential addresses in the Edmonton region.the report describes the weekday travel patterns of residents of the Edmonton Capital Region and travel between the Region and the City of Edmonton The survey collected data on travel behavior over a 24-hour weekday period, with participants being asked to report all trips taken, including their purpose, mode of transportation, and time of travel.
+
+The survey aims to collect data on travel behavior patterns of households residing in the region, and demographic characteristics of the population.The travel variables collected in the survey include the number of trips made, trip duration, distance traveled (The length of trips taken is an indicator of the spatial characteristics of travel and the extent to which people are willing to or forced to travel to complete activities), mode of transportation (car driver, car passenger, walk, transit,school bus, bicycle, and other), travel purpose (such as Work, Post-Secondary, School, Shopping, Social / Recreation, Personal Business, Pick up/Drop off, and other), and travel time. Personal variables collected include age, gender, education level, employment status, and household income. In addition to travel and personal variables, the survey also collected information on household characteristics, including the number of household members, number of vehicles owned, and housing type.
+
+The survey found that the most common mode of transportation for all trip purposes was driving, with 78% of all trips being made by private vehicle. Walking was the second most common mode of transportation, accounting for 10% of all trips. Public transportation was used for only 6% of all trips, and cycling for 3% of all trips. The survey also found that the average trip distance was 8.7 km, and the average travel time was 29 minutes.
+
+# Calgary and Region Travel and Activity Survey (CARTAS) [@https://www.calgary.ca/planning/transportation/surveys.html?redirect=/travelsurveys]
+
+the Calgary and Region Travel and Activity Survey (CARTAS) conducted in 2012. Household travel surveys have been conducted approximately every 10 years since 1964 and provide key information to decision makers on how travel behavior and influences are changing over time. The CARTAS study area includes The City of Calgary, the Municipal District of Foothills, Rockyview County, Wheatland County, and all the towns and villages within those boundaries including: Airdrie, Chestermere, Cochrane, High River, Okotoks, Nanton, and Strathmore. The primary purpose for the survey is to collect information to update the Regional Transportation Model (RTM), but these surveys offer a unique insight in the characteristics of travel in Calgary and the surrounding region.
+
+The travel data collected in the survey include information on the frequency of travel, the length of trips, and the types of transportation used, such as walking, cycling, public transit, and private vehicles. The survey also collected information on the number of people traveling together, the trip purpose, and the time of day the trip was made.
+
+The personal variables collected in the survey include demographic information, such as age, gender, income, education level, and employment status. The survey also collected information on household characteristics, such as the number of people living in the household, the number of vehicles owned by the household, and the availability of alternative modes of transportation, such as bicycles and public transit.
+
+The survey data were used to analyze travel patterns and trends, assess transportation infrastructure needs, and evaluate the effectiveness of transportation policies and programs. The data have been made available to the public and can be used by researchers, policymakers, and other stakeholders to inform decision-making and planning related to transportation and urban development in Calgary and the surrounding areas.
+
+# City of Saskatoon Household Travel Survey
+
+The 2013 Saskatoon Travel Survey is a comprehensive study of travel behavior in the city of Saskatoon, Canada. The survey was conducted in order to gather information about residents' travel habits, including mode choice, trip purposes, and travel times.
+
+The survey collected data from households within the city limits of Saskatoon through telephone interviews, asking questions about each individual's travel on a typical weekday and weekend day. In addition to travel data, personal characteristics such as age, gender, employment status, and household size were also collected.
+
+The travel data collected in the survey includes trip purpose, mode of transportation, origin and destination, time of travel, and travel distance. The survey also collected data on the frequency of travel, such as the number of trips taken by each individual in a week, and the types of destinations visited.
+
+The survey also included a mode choice analysis to better understand the factors that influence people's travel choices, such as personal characteristics and trip characteristics.
+
+The data collected from the survey has been used to inform transportation planning and policy in Saskatoon, as well as to better understand the travel behavior of residents in the city. The information has been used to identify areas where improvements to the transportation system could be made, such as increasing transit service or building new cycling infrastructure.
+
+# Okanagan Travel Survey (OTS)
+
+The City of Kelowna, City of Vernon, Regional District of Central Okanagan, West Kelowna, Lake Country, Peachland, and Westbank First Nation, along with the BC Ministry of Transportation and Infrastructure, have collaborated to conduct the Okanagan Travel Survey (OTS). The smartTRIPS program, which is a part of the Sustainable Transportation Partnership of the Central Okanagan (STPCO), supported the survey's execution. The OTS employs a methodology that involves conducting a household travel survey every five years in the Central Okanagan and City of Vernon region. This type of survey gathers information on the daily travel patterns of each household member who is five years of age or older, based on their travel on the previous day. This survey was conducted in 2007, 2013 and 2018. Like the objectives of the previous Okanagan Travel Surveys conducted in 2007 and 2013, the data collected through the 2018 OTS creates a repository of the travel habits of residents. This data can serve as a foundation for developing policies and transportation plans in the Central Okanagan and The City of Vernon. Additionally, the 2018 OTS contributes to the larger aim of tracking regional travel trends and establishing a regional transportation demand model for the area.
+
+The Okanagan Travel Survey conducted in 2018 recorded the journeys taken by individuals within a specific region during a regular working day that lasted 24 hours. The survey measured the number of person-trips made for different reasons from one location to another. These trips were taken at a specific time of day and made using any of the five available modes of transportation.
+
+The 2018 survey was a household-based survey that collected demographic information on all household members and travel characteristics. data is as follow:
+
+* household data includes address, dwelling type, number of householders, number of vehicles available to householders, number of working bicycles available to householders, household Income.
+
+* Person level data for each person in the household includes gender, age, driver’s license, student status, school level, employed, employment status, workplace location, and type of occupation.
+
+* Trip level data for each trip made by each household includes origin (Geocode origin XY coordinates), destination (Geocode destination XY coordinates), trip departure time, trip arrival time, trip purpose (or activity at destination location such as travel to Work, post-Secondary School, school, restaurant, recreation (gym, swimming, etc.), social outing / meet friends, shopping, personal business, pick up and drop off a passenger, home and others ), mode of travel (such as auto driver, auto passenger, public transit, school bus, bicycle, walked, motorcycle or moped/scooter), transit route(s), number of vehicle occupants, vehicle availability for trip (if not by automobile and household has vehicles), and additional information about trip (open-ended response).
+
+# Winnipeg Area Travel Survey (WATS)
+
+the Winnipeg Area Travel Survey (WATS)is a travel ‘origin-destination’ survey that was conducted in autumn 2007. The survey covered the entire City of Winnipeg and all of the surrounding area within a 100-km radius of downtown Winnipeg. The 2007 WATS is the first all household based trip survey ever done in Winnipeg. In combination with traffic counts, on-board transit ridership counts and demographic and employment data from the Census of Canada and other sources, the 2007 survey provides both a reliable profile of current conditions and a means to measure trends in local travel.
+
+Typical of origin-destination surveys, there are three categories: household data, person data and trip data. As noted, trip data were collected only for household members 11 years of age and older.The 2007 survey was a travel survey that collected demographic information on all household members and travel characteristics. dataset is as follow:
+
+Household data consists of location, household size, number of vehicles, type of dwelling, and household income.
+
+person data includes age, gender, driver’s license, occupation status (worker, student, retiree, etc.), usual place of work or school, long-term physical disability, labour force status, hours of work and education.
+
+Trip data includes origin, destinations, purpose of travel(such as work, work-related, school, shopping, social / recreational, restaurant, medical / dental visit, drive someone somewhere / go pick someone up, return home), mode(s) of travel (such as car driver, car passenger, Winnipeg Transit, intercity bus, other transit, private transportation service, school bus, water taxi3 / ferry, taxi, handi-Transit, bicycle, walk, and motorcycle / moped), departure time, arrival time, If transit: use of park and ride lot, line(s) used, transfer point(s). 
+
+# The London Household Travel Survey
+
+In 2016, the London Household Travel Survey was carried out to offer an in-depth understanding of the travel patterns of individuals residing in the City of London and the nearby Census Metropolitan Area. Vital data concerning travel making, preferences, and attitudes was collected during the survey to support the development of infrastructure and services for road users, public transport passengers, cyclists, and pedestrians. Earlier editions of this survey were conducted in 1987, 2002, and 2009. This Survey collected data on various variables related to households, persons, and trips.
+
+For households, the survey collected data on location of residence, the number of people living in the household, driver’s licence, their age and gender, their employment status, and their income. It also gathered data on the type of dwelling, such as whether it was a single-family home or an apartment, and the availability of cars and bikes in the household.
+
+For persons, the survey collected data on their age, gender, and employment status, as well as their level of education and income. It also asked about their travel behavior, such as how often they traveled, what modes of transportation they used, and their travel purposes.
+
+For trip data, the survey collected data on location of origin and destination for each trip, the purpose of the trip (work, post-secondary school, school, shopping/recreational, other discretionary), the mode of transportation used (such as auto driver, auto passenger, transit, walk/cycle and others), the time of day, the distance traveled, and the duration of the trip. It also gathered information on the origins and destinations of the trips, such as the home address and the location of the destination.
+
+
+#  Kingston Household Travel Survey
+
+The 2019 Kingston Household Travel Survey (KHTS) was undertaken with a random sample of households in the City of Kingston. Previous household travel surveys of Kingston residents were conducted in 2002 and 2008. The 2019 survey builds on the legacy of the previous surveys while expanding the depth of the data collected and providing more detailed reporting on travel patterns captured by the survey. The survey gathered information on household and demographic characteristics relevant to understanding travel patterns. It also captured detailed trip information for residents aged 5+ years, providing a snapshot of the 24-hour travel patterns over the course of a typical fall weekday. 
+
+The objectives of the survey were to gather information to assist the City of Kingston in transportation planning and to promote the use of sustainable modes of transportation, such as walking, cycling, and public transit. The survey aimed to identify travel patterns and behavior and to identify opportunities to reduce the reliance on single-occupancy vehicles.
+
+This survey collected information on various aspects of travel and socio-demographic characteristics, such as:
+
+* Household data consists of age, gender, income, student number in a household, type of dwellings, access to car, access to bicycle,transit Passes and employment status.
+
+* Trip data includes frequency and purpose of trips (such as usual work, work related, post-secondary school, attend K-12 school, shopping, personal business, restaurant, recreation, social, serve passenger, return home, and other), modes of transportation used (such as auto Driver, auto Passenger, Kingston transit, School Bus, Walk, Bicycle, and others), trip distances, and travel times.
+
+# North Shore Transportation Survey
+
+The North Shore Transportation Survey (NSTS) is a biennial survey of residents of the North Shore that tracks key transportation metrics associated with residents’ travel patterns. The survey is an initiative of the City of North Vancouver (CNV), District of North Vancouver (DNV), and District of West Vancouver (DWV). This Survey collected data on various variables related to households, persons, and trips are as follows:
+
+* Participant Characteristics: describes the characteristics of North Shore residents and their households, as captured by the survey, including age, gender, household, employment, health status, occupation, bike access, and vehicle access characteristics. The purpose of capturing these characteristics is to better understand travellers’ needs, challenges, and patterns. The results are based on the survey sample with selected information from the 2016 census.
+
+* Daily trip characteristics: provides a snapshot of daily (24-hour) travel patterns from the trips reported by survey participants and includes location, trip demand, purpose (such as usual work, work related, school, personal business, restaurant, recreation, social, serve passenger, return home and others ), mode share (Auto Driver, Auto Passenger, Transit, Walk, bicycle, and others), and distribution (include the trip origin and destinations).
+
+
+
+
+
+
 
 
 # The Linkable Open Data Environment (LOD)
