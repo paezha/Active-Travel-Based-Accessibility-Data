@@ -4,6 +4,7 @@ author: "Mahdis Moghadasi, Jeneva Beairsto, Meghan Winters, Antonio Paez"
 format:
   docx:
     reference-doc: custom-reference-doc.docx
+    prefer-html: true
 editor: source
 bibliography: references.bib
 ---
@@ -329,7 +330,7 @@ Table 5, shows required data based on the each measure.
 
 ## Data needs and sources
 
-AOne of the existing data sources that can be utilized for data needs is the household travel survey, which has been conducted in various regions throughout Canada. This survey provides access to relevant data pertaining to travel, users, and origin-destination, which are essential for calculating accessibility measures accurately. The household travel survey is a valuable resource for transportation planners, policymakers, and researchers who seek to gain a comprehensive understanding of travel behavior patterns and the factors that influence them. In a household travel survey, several variables are collected such as household levels, person level for each person in the household, and trip level for each trip made by each household member. The General Social Survey (GSS) is another data source that can be utilized at the national level to extract information on travel behavior. The GSS is a comprehensive survey that collects data on a range of topics, including transportation and travel patterns, social trends, and attitudes. The survey is conducted regularly by Statistics Canada.
+A one of the existing data sources that can be utilized for data needs is the household travel survey, which has been conducted in various regions throughout Canada. This survey provides access to relevant data pertaining to travel, users, and origin-destination, which are essential for calculating accessibility measures accurately. The household travel survey is a valuable resource for transportation planners, policymakers, and researchers who seek to gain a comprehensive understanding of travel behavior patterns and the factors that influence them. In a household travel survey, several variables are collected such as household levels, person level for each person in the household, and trip level for each trip made by each household member. The General Social Survey (GSS) is another data source that can be utilized at the national level to extract information on travel behavior. The GSS is a comprehensive survey that collects data on a range of topics, including transportation and travel patterns, social trends, and attitudes. The survey is conducted regularly by Statistics Canada.
 
 The following is an overview of the categories of data that are obtained through the households travel surveys:
 
@@ -351,6 +352,7 @@ kable(data, format = "html") %>%
   kable_classic() %>%
   kable_styling(bootstrap_options = "striped", full_width = FALSE, font_size = 12) %>%
   row_spec(0, bold = T)
+print(data)
 
 ```
 
@@ -554,6 +556,7 @@ kable(table_data, format = "html") %>%
   kable_classic() %>%
   kable_styling(bootstrap_options = "striped", full_width = FALSE, font_size = 12) %>%
   row_spec(0, bold = T)
+print(table_data)
 ```
 
 # The Linkable Open Data Environment (LOD)
@@ -801,6 +804,27 @@ This dataset is a combination of sidewalks, trails and links forming a continuou
 -   Museums
 
 -   Hospitals
+
+
+## [City Of Burlington](https://data.waterloo.ca/search?tags=base%20data)
+
+**Cycling and pedestrian Networks**
+
+* Pedestrian Network: The pedestrian network contains the location and details about all pathways and sidewalks in the City of Burlington.
+
+* Cycling Network: Physical cycling facilites within City of Burlington. Facilites include bike lanes, paved shoulders, shared use (sharrows), off road and adjacent to road multiuse paths.
+
+**Points of Interest (POI)**
+
+* City of Burlington Address points
+
+* Transit Bus Stops
+
+* Public art 
+* Parks Points
+* Libraries
+* Facilities : This dataset includes arenas, pools, communities centres, park facilities, etc.  Also includes joint venture features.
+
 
 In Table 6, each database was examined based on seven data categories.
 
