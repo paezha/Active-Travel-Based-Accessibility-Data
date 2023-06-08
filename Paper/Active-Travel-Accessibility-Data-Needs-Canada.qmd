@@ -10,7 +10,7 @@ bibliography: references.bib
 
 ## Abstract
 
-Active travel is a key element to achieve robust and healthy urban transportation policies. As the analysis of transportation needs in cities shifts from a focus on mobility to accessibility, the need to assess accessibility by cycling and walking has become increasingly pressing. The distinguishing features of these modes—lower speeds, shorter trips, and potentially different purposes compared to motorized trips—mean that the data inputs required for accessibility analysis are not necessarily the same as those used for the study of accessibility for motorized travel. The objective of this review is to assess the sources of data and data needs to implement active accessibility analysis. Walking-specific and cycling-specific geographic accessibility measures and data applied within recently published literature are reviewed. Walking and cycling accessibility measures are compared in terms of the types of metrics, the origins and destinations considered, geographic scales, and travel time or distance calculations. In comparing approaches for walking versus cycling, this report also highlights possible considerations, challenges, and questions that emerge when considering the future of active travel accessibility-based analysis. The discussion in this review is centered on the Canadian context, but the lessons may be more broadly applicable to other national contexts.
+Active travel is a key element to achieve robust and healthy urban transportation policies. As the analysis of transportation needs in cities shifts from a focus on mobility to accessibility, the need to assess accessibility by cycling and walking has become increasingly pressing. The distinguishing features of these modes---lower speeds, shorter trips, and potentially different purposes compared to motorized trips---mean that the data inputs required for accessibility analysis are not necessarily the same as those used for the study of accessibility for motorized travel. The objective of this review is to assess the sources of data and data needs to implement active accessibility analysis. Walking-specific and cycling-specific geographic accessibility measures and data applied within recently published literature are reviewed. Walking and cycling accessibility measures are compared in terms of the types of metrics, the origins and destinations considered, geographic scales, and travel time or distance calculations. In comparing approaches for walking versus cycling, this report also highlights possible considerations, challenges, and questions that emerge when considering the future of active travel accessibility-based analysis. The discussion in this review is centered on the Canadian context, but the lessons may be more broadly applicable to other national contexts.
 
 ## Introduction
 
@@ -24,7 +24,7 @@ The relevance of accessibility-based planning is even more evident when active m
 
 The objective of the present study is to investigate ATB accessibility with a focus on data sources and needs, using Canada as case study. The research is prompted by a recent Canadian project that has been tasked with developing data-driven standards for the analysis of transportation equity. The need to propose methods that can be used consistently across regions requires a sound understanding of how analysis and outputs can be conditioned by the data inputs. it is important to acknowledge that other reviews of ATB accessibility measures exist [@geurs2004; @iacono2010; @maghelal2011; @talen2013; @vale2016active]. The contribution of this paper is to fill a gap in the literature by focusing on the data required by various measures of ATB accessibility and comparing measures that can be implemented consistently in different contexts, as well as data needs for consistent implementation of the rest.
 
-The reminder of this paper is organized as follows. Section 2 presents a background of methods. Section 3 presents methods  for ATB accessibility analysis, section 4 provides a categorization of the required data according to each of the accessibility measurements. Section 5 provides Important considerations and possible challenges for calculating accessibility by active mode; discussions and conclusions are provided in Section 6.
+The reminder of this paper is organized as follows. Section 2 presents a background of methods. Section 3 presents methods for ATB accessibility analysis, section 4 provides a categorization of the required data according to each of the accessibility measurements. Section 5 provides Important considerations and possible challenges for calculating accessibility by active mode; discussions and conclusions are provided in Section 6.
 
 ## Background
 
@@ -46,20 +46,17 @@ $$
 A^{pk}_i = \sum_{j=1}^{J} g(O^k_j) f(c^p_{ij})
 $$ {#eq-general-accessibility}
 
-With functions for the opportunities that allow this formulation:
-$$
+With functions for the opportunities that allow this formulation: $$
 g(O_j) = O_j
 $$ {#eq-opportunities-function}
 
-\noindent as well as possibly agglomeration effects as in:
-$$
+\noindent as well as possibly agglomeration effects as in: $$
 g(O_j) = O^\alpha_j
 $$ {#eq-agglomeration-effects}
 
 This kind of accessibility measure was obtained from Hansen, 1959,which measures accessibility by the number of opportunities reachable via an impedance (or spatial decay) function.The impedance function reduces opportunities as travel costs rise (time, money, etc.).The impedance function computes using a variety of formulas, including negative power, exponential, lognormal, and log-logistic (@hansen1959accessibility; @ingram1971concept; @reggiani2011accessibility; @geurs2003evaluation; @vale2016active).A_i, O_j, and C_ij in this formula represent matrices of accessibility opportunities and costs, respectively. Following the development of @levinson2020towards, the functions (g and f) discount opportunities and costs based on diminishing value of opportunities with both number and cost.In principle, the matrix of weighted opportunities (O_j) can take into account different activity types, times of day, and all available modes, as well as the matrix of all relevant cost elements (C_ij), which may be the full social costs or generalized internal costs, depending on the purpose.
 
-The decay function's cumulative opportunities (rectangular) formulation is as follows:
-$$
+The decay function's cumulative opportunities (rectangular) formulation is as follows: $$
 f(c^p_{ij}) =
 \begin{cases}
   1 & \text{if } c^p_{ij} \le \gamma^p \\
@@ -67,25 +64,23 @@ f(c^p_{ij}) =
 \end{cases}
 $$ {#eq-impedance-function}
 
-In addition, The widely used exponential decay formulation in gravity models is frequently given by @eq-exponential-distance-decay: 
-$$
+In addition, The widely used exponential decay formulation in gravity models is frequently given by @eq-exponential-distance-decay: $$
 f(c^p_{ij}) = exp(-\theta c^p_{ij})
 $$ {#eq-exponential-distance-decay}
 
-Generally, close opportunities are preferred over distant ones [@miller2004tobler], and fewer trips are made between distant locations than between nearby ones[@ingram1971concept].As a result, interaction is less likely in remote locations. In most cases, travel impedance functions are calibrated using observed trip likelihood or trip rate data from travel surveys[@geurs2001accessibility; @ingram1971concept].So, the impedance functions show reduced interaction between places. The trip rates can be used to calibrate the travel impedance function (f (C_{ij})).
+Generally, close opportunities are preferred over distant ones [@miller2004tobler], and fewer trips are made between distant locations than between nearby ones[@ingram1971concept].As a result, interaction is less likely in remote locations. In most cases, travel impedance functions are calibrated using observed trip likelihood or trip rate data from travel surveys[@geurs2001accessibility; @ingram1971concept].So, the impedance functions show reduced interaction between places. The trip rates can be used to calibrate the travel impedance function (f (C\_{ij})).
 
 Individual-based accessibility in active mode (e.g., walking, cycling) can also be difficult to calculate due to a variety of factors. Some of the major constraints for calculating individual-based accessibility in active mode are as follows:
 
-1. Individual preferences for modes of transportation can have a significant impact on accessibility. Some people prefer to walk or ride their bikes, while others prefer to take public transportation or drive. Factors such as distance, time, safety, and comfort can all have an impact on personal preferences.
+1.  Individual preferences for modes of transportation can have a significant impact on accessibility. Some people prefer to walk or ride their bikes, while others prefer to take public transportation or drive. Factors such as distance, time, safety, and comfort can all have an impact on personal preferences.
 
-1. Physical ability: Similar to place-based accessibility, personal physical ability can greatly impact individual-based accessibility in active mode. People with disabilities or health issues may find it difficult or impossible to travel by foot or bike, reducing their accessibility.
+2.  Physical ability: Similar to place-based accessibility, personal physical ability can greatly impact individual-based accessibility in active mode. People with disabilities or health issues may find it difficult or impossible to travel by foot or bike, reducing their accessibility.
 
-1. Time constraints: In order to save time, people may choose faster modes of transportation such as driving or taking public transportation, reducing accessibility in active modes. While individual-based accessibility is measured, it should be recognized that every individual has a different opportunity set available [@miller1991modelling]. Effectively, the available time threshold (t) varies for each person as a function of individual constraints, such as time of day, purpose, and so on. Constraints arise for a number of reasons. Time geography acknowledges that spatial and temporal characteristics limit an individual’s choice of activities [@chi2013impact; @pred1977choreography; @miller1991modelling; @miller2009field]. Time constraints can be visualized using a time-space diagram, the size of which is determined by both the amount of time available and the performance of the transportation system [@ilagcrstrand1970people]. The space-time prism accounts for an individual’s activity schedule and can be used to measure access to multiple activities and activity participation time using simple behavioral rules [@miller1991modelling]. Accessibility is measured by the total number of opportunities available within the space-time prism encompassing all possible paths under the time constraint [@tong2015transportation]. So, while opportunities may be spatially accessible, the amount of time available in a day for people to reach and engage in these activities is limited. This line of thought leads to the constraints-based or people-based accessibility measure[@wu2001computational].
+3.  Time constraints: In order to save time, people may choose faster modes of transportation such as driving or taking public transportation, reducing accessibility in active modes. While individual-based accessibility is measured, it should be recognized that every individual has a different opportunity set available [@miller1991modelling]. Effectively, the available time threshold (t) varies for each person as a function of individual constraints, such as time of day, purpose, and so on. Constraints arise for a number of reasons. Time geography acknowledges that spatial and temporal characteristics limit an individual's choice of activities [@chi2013impact; @pred1977choreography; @miller1991modelling; @miller2009field]. Time constraints can be visualized using a time-space diagram, the size of which is determined by both the amount of time available and the performance of the transportation system [@ilagcrstrand1970people]. The space-time prism accounts for an individual's activity schedule and can be used to measure access to multiple activities and activity participation time using simple behavioral rules [@miller1991modelling]. Accessibility is measured by the total number of opportunities available within the space-time prism encompassing all possible paths under the time constraint [@tong2015transportation]. So, while opportunities may be spatially accessible, the amount of time available in a day for people to reach and engage in these activities is limited. This line of thought leads to the constraints-based or people-based accessibility measure[@wu2001computational].
 
+4.  Weather conditions, like place-based accessibility, can have an impact on individual-based accessibility in active mode. In extreme weather, people may be less likely to walk or cycle, reducing their ability to choose these modes.
 
-1. Weather conditions, like place-based accessibility, can have an impact on individual-based accessibility in active mode. In extreme weather, people may be less likely to walk or cycle, reducing their ability to choose these modes.
-
-1. Infrastructure: The quality and availability of infrastructure such as sidewalks, bike lanes, and pedestrian crossings can greatly impact individual-based accessibility in active mode. People may be less likely to choose active modes of transportation in areas with poor infrastructure, reducing there ability to choose these modes.
+5.  Infrastructure: The quality and availability of infrastructure such as sidewalks, bike lanes, and pedestrian crossings can greatly impact individual-based accessibility in active mode. People may be less likely to choose active modes of transportation in areas with poor infrastructure, reducing there ability to choose these modes.
 
 Accessibility measures in active modes include activity-based measures, distance-based, topological or infrastructure-based measures, utility-based measures, as well as, walkability, and bikeability. Activity-based measures (includes gravity-based and cumulative opportunities measures) are based on the gravity model and weight opportunities according to a travel impedance function and the accessibility of a place is assessed as the combined effect of the size of opportunities and the cost of traveling to them. Distance-based measures analyze the closest facilities and include: 1) distance to the closest opportunity, 2) the number of opportunities within a defined distance or time, 3) the mean distance to all opportunities, and 4) the mean distance to a defined number of closest opportunities. Infrastructur -based measures are based exclusively on features of the street and transportation network and are insensitive to the location of activities in space. utility-based measures (also designated benefit measures) are developed from microeconomic random utility theory and describe accessibility as the result of a (rational) choice from a set of destination transportation alternatives [@kwan1998; @halden2000accessibility; @geurs2001accessibility; @apparicio2008comparing]. Walkability and bikeability measure the number of people, households or jobs distributed over a unit of area or measures how many types---offices, housing, retail, entertainment, services, and so on---are located in a given area [@frank2003health; @leslie2007walkability]. Indeed, using accurate accessibility measures for walking or cycling trips can assist transport planners in making more rational decisions in infrastructure provision for non-motorized transportation [@iacono2010; @devkota2012planning].
 
@@ -109,7 +104,7 @@ $$
 A_i = \sum_{j = 1}^{J}{\ W^ \theta_{ij} f(c_{ij})}
 $$ {#eq-gravity-measures}
 
-This equation gives the accessibility from the origin location i, W_j are relevant opportunities found at j, f(c_{ij}) is the cost of moving between i and j. Function f() defines a kernel around location i. Activity-based measures are useful when opportunities are complementary (e.g., jobs, people, services, parks) and when access to more opportunities and being closer (with gravity-based models) is advantageous.
+This equation gives the accessibility from the origin location i, W_j are relevant opportunities found at j, f(c\_{ij}) is the cost of moving between i and j. Function f() defines a kernel around location i. Activity-based measures are useful when opportunities are complementary (e.g., jobs, people, services, parks) and when access to more opportunities and being closer (with gravity-based models) is advantageous.
 
 Cumulative opportunities (also known as isochrones or contour measures), measures count the number of opportunities within a defined catchment area. In contrast to the utility measure, which measures accessibility by the 'net utility' from travel, the cumulative measure represents accessibility with the total number of opportunities. This measure counts both the number of reachable opportunities and the associated travel costs.
 
@@ -117,8 +112,7 @@ $$
 A_i = \sum_{j = 1}^{J}{\ W_{j} f(c_{ij})}
 $$ {#eq-cumulative-measure}
 
-in a cumulative measure the distance decay function is binary:
-$$
+in a cumulative measure the distance decay function is binary: $$
 f(c_{ij} \le \gamma _i) =
 \begin{cases}
   1 & \text{if } c_{ij} \le \gamma _i \\
@@ -187,7 +181,7 @@ $$ {eq-accessibility-maximum-utility}
 In the following, Tables 1 and 2 have categorized recent studies based on the accessibility by walking and cycling. However, Vale et al. (2016) found relatively few studies examining cycling-specific accessibility in comparison to walking. For a comprehensive review of all 84 papers on walking and cycling accessibility (published by September 2013) refer to Vale et al. (2016).
 
 | **Type of metric** | **Study**                          | **Measure**                                                                                                                                                                                                                                                    | **Travel time / distance threshold** | **Origins / Destinations**                                                                                                      | **Geographic scale**          | **Travel time / distance calculation** | positive / normative implementations |
-|---------|---------|-----------|---------|---------|---------|---------|---------|
+|---------|---------|---------|---------|---------|---------|---------|---------|
 | Activity-based     | Murphy and Owen (2019)             | Cumulative job opportunities Access gap: comparing LTS 1-4 Weighted accessibility by a number of workers                                                                                                                                                       | 20 mins (Tested 5 to 6 mins)         | Census block centroids                                                                                                          | Neighbourhoods -\> city level | Network travel time 15 km/h            | Normative                            |
 |                    | Faghih Imani, Miller et al. (2019) | Cumulative opportunities: jobs & population access Calculated isochrones for LTS 1-4                                                                                                                                                                           | 30 mins                              | Dissemination area centroids                                                                                                    | Dissemination areas           | Network travel time                    | Normative                            |
 |                    | Wu, Lu et al. (2019)               | Gravity-based measure: accessibility to POIS at metro stations Lognormal distance decay function (confirmed using distribution of bicycle-metro trip data)                                                                                                     | 2.5 Km                               | Metro stations (origins) POIs (destinations)                                                                                    | 2.5 km buffer                 | Euclidean distance                     | Normative                            |
@@ -217,7 +211,7 @@ Walkability measures are divided into 4 categories including Frank's Walkability
 Most of the studies assessed walkability using two Frank's index and walk score [@frank2005linking; @frank2006many; @frank2010development; @vale2016active]. The major difference between these approaches is that Walk Score uses a gravity-based methodology. Opportunities are weighted using a distance decay function, while the Walkability Index is based on a cumulative opportunities measure. In the following, Table 3 provides a summary of this categorization.
 
 | **Methods**                                                                                                                                                                                                    | **Author**                                               | **Variables**                                                | **Data**                                                                                                                                                                                                             | **Descriptions**                                                                                                                                                                                                                                                                                                                                       | positive / normative implementations |
-|------------|------------|------------|------------|-------------|------------|
+|------------|------------|------------|------------|------------|------------|
 | Methods based on a theory-driven approach                                                                                                                                                                      |                                                          |                                                              |                                                                                                                                                                                                                      |                                                                                                                                                                                                                                                                                                                                                        |                                      |
 | Frank's Walkability Index                                                                                                                                                                                      | Frank, Schmid et al. (2005), Frank, Sallis et al. (2010) | Net residential/ Population density                          | · travel data from both Census Journey to Work for both regions                                                                                                                                                      |                                                                                                                                                                                                                                                                                                                                                        | Normative                            |
 |                                                                                                                                                                                                                |                                                          | · Retail floor area ratio                                    | · Household Travel Survey Data                                                                                                                                                                                       |                                                                                                                                                                                                                                                                                                                                                        |                                      |
@@ -284,7 +278,7 @@ Explaining the Bikeability of an environment has included the following characte
 -   Connected infrastructures as a functional component of entire towns and urban fabrics [@lowry2012assessment]. According to Lowry, Callister et al. (2012), this is in fact what covers the term "Bikeability". In the following, Table 4 prepares some of the studies that used bikeability index.
 
 |            **Author**            |  **Study area**  |                                                                                            **Measure**                                                                                             |                                                                                                                                                                                **Data**                                                                                                                                                                                 |                                                                                                                                                                                                                  **Descriptions**                                                                                                                                                                                                                   | positive / normative implementations |
-|:----------:|:----------:|:----------:|:----------:|:-----------:|------------|
+|:----------:|:----------:|:----------:|:----------:|:----------:|------------|
 |  Lowry, Callister et al. (2012)  |  Moscow, Idaho   |                                       · proposed calculation for bikeability was developed on the basis of a common accessibility equation (Hansen's model).                                       |                                                                                                                                  · bikeway is any roadway where bicycle travel is permitted regardless of the presence of a bike lane                                                                                                                                   |                                                                                                                                                            · Assessment of bikeability considers comfort and safety of the entire bikeway network for access to important destinations.                                                                                                                                                             | Positive                             |
 |                                  |                  |                                                           · calculation finds the shortest routes between zone i and every destination j                                                           |                                                                                                                                        · Complete entire bikeway network and important destinations in the case study community                                                                                                                                         |                                                                                                                                                                                   · impedance functions were estimated based on a negative exponential function.                                                                                                                                                                                    |                                      |
 |                                  |                  |                                                                                                                                                                                                    |                                                                                                                                  · only arterials, collectors, and shared-use paths were considered part of the major bikeway network.                                                                                                                                  |                                                                                                                                                                                             · bikeability was assessed for all commercial destinations                                                                                                                                                                                              |                                      |
@@ -311,11 +305,11 @@ A particular kind of data management system is a data warehouse. Data warehousin
 
 In this study, the multidimensional data warehouse design and end-user requirements elicitation tasks are supported by a user-centered methodology. Three steps make up the process:
 
-* First, our method begins by thoroughly examining the data sources to determine, without yet taking requirements into consideration, the multidimensional knowledge they capture (i.e., data likely to be analyzed from a multidimensional point of view).
+-   First, our method begins by thoroughly examining the data sources to determine, without yet taking requirements into consideration, the multidimensional knowledge they capture (i.e., data likely to be analyzed from a multidimensional point of view).
 
-* Second, we suggest using this knowledge to aid in the work of needs elicitation. By doing this, we are able to fully utilize the sources' analytical skills while already balancing requirements with the data sources.
+-   Second, we suggest using this knowledge to aid in the work of needs elicitation. By doing this, we are able to fully utilize the sources' analytical skills while already balancing requirements with the data sources.
 
-* Third, once the requirements are established, we automatically generate the data warehouse conceptual schema and the multidimensional knowledge extracted from the sources.
+-   Third, once the requirements are established, we automatically generate the data warehouse conceptual schema and the multidimensional knowledge extracted from the sources.
 
 \`
 
@@ -335,117 +329,102 @@ Table 5, shows required data based on the each measure.
 
 ## Data needs and sources
 
-As previously stated, the computation of accessibility metrics requires data pertaining to six distinct categories. These data sets are essential to calculate the accessibility measures accurately. Canada boasts a plethora of data sources, ranging from national to regional and urban levels, which provide the necessary data required for the calculation of accessibility measures. One of the existing data sources that can be utilized for data needs is the household travel survey, which has been conducted in various regions throughout Canada. This survey provides access to relevant data pertaining to travel, users, and origin-destination, which are essential for calculating accessibility measures accurately. The household travel survey is a valuable resource for transportation planners, policymakers, and researchers who seek to gain a comprehensive understanding of travel behavior patterns and the factors that influence them. In a household travel survey, several variables are collected such as household levels, person level for each person in the household, and trip level for each trip made by each household member. The General Social Survey (GSS) is another data source that can be utilized at the national level to extract information on travel behavior. The GSS is a comprehensive survey that collects data on a range of topics, including transportation and travel patterns, social trends, and attitudes. The survey is conducted regularly by Statistics Canada.
-
+AOne of the existing data sources that can be utilized for data needs is the household travel survey, which has been conducted in various regions throughout Canada. This survey provides access to relevant data pertaining to travel, users, and origin-destination, which are essential for calculating accessibility measures accurately. The household travel survey is a valuable resource for transportation planners, policymakers, and researchers who seek to gain a comprehensive understanding of travel behavior patterns and the factors that influence them. In a household travel survey, several variables are collected such as household levels, person level for each person in the household, and trip level for each trip made by each household member. The General Social Survey (GSS) is another data source that can be utilized at the national level to extract information on travel behavior. The GSS is a comprehensive survey that collects data on a range of topics, including transportation and travel patterns, social trends, and attitudes. The survey is conducted regularly by Statistics Canada.
 
 The following is an overview of the categories of data that are obtained through the households travel surveys:
 
+\Table 6: shows various data in Household travel survey
 
-\`
-
-Table 6, shows various data in Household travel survey.
-
-|       **household levels**       	|                     **person level**                     	|                    **trip level**                   	|
-|:--------------------------------:	|:--------------------------------------------------------:	|:---------------------------------------------------:	|
-| Home location                    	| Gender                                                   	| Origin location                                     	|
-| Dwelling type                    	| Age                                                      	| Destination location                                	|
-| Household size (# people)        	| Driver’s licence                                         	| Trip departure time (start and end time)            	|
-| Number of vehicles               	| Transit pass                                             	| Purpose of travel (destination activity)            	|
-| Number of bicycles               	| Student status                                           	| Mode(s) of travel (up to 5)                         	|
-| Household income                 	| School level                                             	| Number of vehicle occupants (if driver or passenger 	|
-| Home parking (#off-street spots) 	| School location                                          	|                                                     	|
-|                                  	| Employment status                                        	|                                                     	|
-|                                  	| Workplace location                                       	|                                                     	|
-|                                  	| Parking at work and school(free or pay)                  	|                                                     	|
-|                                  	| Other occupational status                                	|                                                     	|
-|                                  	| Location of residence                                    	|                                                     	|
-|                                  	| Frequency of cycling, walking, and other active mode use 	|                                                     	|
+```{r, echo = FALSE, results = 'asis'}
+library(kableExtra)
 
 
+# Create the table data
+data <- data.frame(
+  `Household levels` = c("Home location", "Dwelling type", "Household size (# people)", "Number of vehicles", "Number of bicycles", "Household income", "Home parking (#off-street spots)", "", "", "", "", ""),
+  `Person level` = c("Gender", "Age", "Driver’s licence", "Transit pass", "Student status", "School level", "School location", "", "", "", "", ""),
+  `Trip level` = c("Origin location", "Destination location", "Trip departure time (start and end time)", "Purpose of travel (destination activity)", "Mode(s) of travel (up to 5)", "Number of vehicle occupants (if driver or passenger)", "Employment status", "Workplace location", "Parking at work and school(free or pay)", "Other occupational status", "Location of residence", "Frequency of cycling, walking, and other active mode use")
+)
 
-###  General social survey (GSS)
+# Generate the table using kable() function
+kable(data, format = "html") %>%
+  kable_classic() %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, font_size = 12) %>%
+  row_spec(0, bold = T)
+
+```
+
+![Classification of required data](images/Fig3-01.jpg){fig-align="center"}
+
+# General social survey (GSS)
 
 The General Social Survey (GSS) is a ***national*** survey conducted by Statistics Canada that collects information on the social trends and attitudes of Canadians. The survey has been conducted since 1985 and is conducted every two years, making it one of the longest-running surveys of its kind in Canada. This Survey (GSS) in Canada covers a wide range of topics related to social trends and attitudes. Some of the major topics covered by the survey include:Social well-being, Health, Education, Work, Family, Social networks, Crime and justice, and Time use. The survey is designed to provide a snapshot of social trends and attitudes in Canada, and is used by researchers, policy-makers, and the general public to gain a better understanding of the social issues facing Canadians.
 
-The Time Use Survey is a component of the General Social Survey (GSS) that has been conducted since 1986.This survey is conducting every 5 years (1986, 1992, 1998, 2005, and 2015) and continued until 2020. However, the information related to the 2020 census has not been released yet. So, The most recent survey was released in 2015. It is designed to provide information on how Canadians allocate their time on a daily basis activities such as paid work, household chores, leisure activities, caregiving activities, and travel trips. Time Use Survey collects data on how individuals travel from one location to another during their daily activities. This includes modes of transportation such as walking, cycling, driving, and taking public transit.The survey collects information on the start and end time of each trip, the mode of transportation used, the purpose of the trip (e.g. work, shopping, leisure), and the distance traveled. In addition, This dataset contains travel time data for people in many of the Census Metropolitan Areas (CMAs) and non-CMA areas all over Canada. CMAs are including St. John's, Halifax, Saint John, Montreal, Quebec City, Toronto, Ottawa, Hamilton, Winnipeg, Regina, Saskatoon, Calgary, Edmonton, and Vancouver. and the non-CMA areas of each of the ten provinces were also grouped to form ten more strata.The survey also collects information on the characteristics of individuals and their households such as age, sex, education, employment status, family composition, and income. 
+The Time Use Survey is a component of the General Social Survey (GSS) that has been conducted since 1986.This survey is conducting every 5 years (1986, 1992, 1998, 2005, and 2015) and continued until 2020. However, the information related to the 2020 census has not been released yet. So, The most recent survey was released in 2015. It is designed to provide information on how Canadians allocate their time on a daily basis activities such as paid work, household chores, leisure activities, caregiving activities, and travel trips. Time Use Survey collects data on how individuals travel from one location to another during their daily activities. This includes modes of transportation such as walking, cycling, driving, and taking public transit. The survey collects information on the start and end time of each trip, the mode of transportation used, the purpose of the trip (e.g. work, shopping, leisure), and the distance traveled. In addition, This dataset contains travel time data for people in many of the Census Metropolitan Areas (CMAs) and non-CMA areas all over Canada. CMAs are including St. John's, Halifax, Saint John, Montreal, Quebec City, Toronto, Ottawa, Hamilton, Winnipeg, Regina, Saskatoon, Calgary, Edmonton, and Vancouver. and the non-CMA areas of each of the ten provinces were also grouped to form ten more strata.The survey also collects information on the characteristics of individuals and their households such as age, sex, education, employment status, family composition, and income.
 
 Based on the categories of data mentioned above, this database includes the following data:
 
-* Travel data (trips)
-Travel data provides information about the trips, including the mode of travel, duration of travel, and trip origins and destinations. This dataset contains 301 bicycle and 4236 walking trips in 2015. Each trip contains pumID, start time, end time, duration, origin and destination.
+-   Travel data (trips) Travel data provides information about the trips, including the mode of travel, duration of travel, and trip origins and destinations. This dataset contains 301 bicycle and 4236 walking trips in 2015. Each trip contains pumID, start time, end time, duration, origin and destination.
 
-* Users data (Socio-economic and personal data)
+-   Users data (Socio-economic and personal data)
 
 Demographic variables of pedestrian and cycling users including age, gender, and the number of households can be obtained from this Survey.
 
-* Origin- destination data
+-   Origin- destination data
 
 In the GSS database, different travel destinations and locations are considered and each location is identified with a specific code, as follows: home or on the property, someone else's home or property, work or school, in the neighbourhood, Outdoors, Grocery store, other stores or mall, Library, museum or theatres, Sports center, field or arena, Restaurant, bar or club, Place of worship, medical, dental or another health clinic, and Elsewhere.
 
-###  Transportation Tomorrow Survey survey (TTS)
+# Transportation Tomorrow Survey survey (TTS)
 
-
-The Transportation Tomorrow Survey (TTS) is a comprehensive survey (a series of population-based cross sectional travel surveys) that gathers information about how and where people travel. The survey aims to gather detailed information about the travel patterns of households and individuals.Since 1986, the Greater Toronto Area (GTA) has been implementing the Transportation Tomorrow Survey (TTS) program  every five years, which has proven to be a highly effective means of collecting data on travel behavior. The Transportation Tomorrow Survey (TTS) are parts of an ongoing data collection program by the Transportation Information Steering Committee (TISC). The survey data (2016, 2011, 2006, 2001, 1996, 1991 and 1986) are currently under the care of the Data Management Group. This group is responsible for maintaining the TTS databases and making available appropriate travel information for any urban transportation study in the area.
+The Transportation Tomorrow Survey (TTS) is a comprehensive survey (a series of population-based cross sectional travel surveys) that gathers information about how and where people travel. The survey aims to gather detailed information about the travel patterns of households and individuals.Since 1986, the Greater Toronto Area (GTA) has been implementing the Transportation Tomorrow Survey (TTS) program every five years, which has proven to be a highly effective means of collecting data on travel behavior. The Transportation Tomorrow Survey (TTS) are parts of an ongoing data collection program by the Transportation Information Steering Committee (TISC). The survey data (2016, 2011, 2006, 2001, 1996, 1991 and 1986) are currently under the care of the Data Management Group. This group is responsible for maintaining the TTS databases and making available appropriate travel information for any urban transportation study in the area.
 
 In 1986, the survey covered the Greater Toronto and Hamilton Area (GTHA), which included the Municipality of Metropolitan Toronto and the Regional Municipalities of Durham, York, Peel, Halton, and Hamilton. In 1991, the survey area was expanded to include the municipalities adjacent to the GTHA boundary, known as the 'fringe area.' The 1996 survey included all of the GTHA, plus several additional regions, including Peterborough County, City of Peterborough, Victoria County, Town of Orangeville, Simcoe County, City of Barrie, Wellington County, City of Guelph, Waterloo Region, and Niagara Region. In 2001, the survey area changed again, with the addition of the whole of Simcoe County, the City of Orillia, and the exclusion of the Regional Municipality of Waterloo and Northumberland County. The 2006 survey area included the Regional Municipality of Waterloo, the City of Brantford, and Dufferin County, with interviews conducted in Brant County during interviewer training. The survey area in the 2011 and 2016 TTS was the same as in 2006, with the inclusion of Brant County.
 
+TTS database includes ***Household attributes*** (such as Regional municipality of household, geocode of household, UTM X and Y coordinate of the household, Type of dwelling unit, Number of persons in the household, Day of week trip data, Number of vehicles, Number of persons possessing a driver's licence in the household, Number of full or part time workers in the household, Number of full or part time students in the household, Number of household trips on trip day, and Household's total income), ***Person attributes*** (such as person number within the household, age, gender, possession of a driver's licence, possession of a transit pass, employment status of the person, person's occupation type, student status of person, school codes (Starting from 2001), regional/Local municipality of person's usual place of work, UTM X and Y coordinate of person's usual place of work, geocode person's usual place of work, number of trips made by the individual on trip day, and number of trips made by individual on trip day with primary mode being public transit), ***Trip attributes*** (such as trip number for persons in household, start time of the trip, Primary mode of the trip (public transit, bicycle and walking), purpose of the trip (home-based work (i.e. home-to-work or work-to-home), home-based-school, home-based-discretionary, non-Home-based), origin purpose of the trip, Regional municipality of trip origin, planning district of trip origin, 2001 and 2006 traffic zone of trip origin, UTM X and Y coordinate of trip origin, Method used to geocode trip origin, destination purpose of the trip (second and subsequent school trips, daycare (not in 1986), entertainment (1986 only), facilitate passenger, home, linked trip (1991 only), marketing/ Shopping (not in 1991), second and subsequent work trips, first school trip of the day, first work trip of the day and others), regional municipality of trip destination, planning district of trip destination, 2001 and 2006 traffic zone of trip destination, UTM X and Y coordinate of trip destination, method used to geocode trip destination, straight line trip length in kilometres, manhattan distance trip length in kilometres).
 
-TTS database includes ***Household attributes*** (such as Regional municipality of household, geocode of household, UTM X and Y coordinate of the household, Type of dwelling unit, Number of persons in the household, Day of week trip data, Number of vehicles, Number of persons possessing a driver’s licence in the household, Number of full or part time workers in the household, Number of full or part time students in the household, Number of household trips on trip day, and Household’s total income), ***Person attributes*** (such as person number within the household, age, gender, possession of a driver’s licence, possession of a transit pass, employment status of the person, person’s occupation type, student status of person, school codes (Starting from 2001), regional/Local municipality of person’s usual place of work, UTM X and Y coordinate of person’s usual place of work, geocode person’s usual place of work, number of trips made by the individual on trip day, and number of trips made by individual on trip day with primary mode being public transit), ***Trip attributes*** (such as trip number for persons in household, start time of the trip, Primary mode of the trip (public transit, bicycle and walking), purpose of the trip (home-based work
-(i.e. home-to-work or work-to-home), home-based-school, home-based-discretionary, non-Home-based), origin purpose of the trip, Regional municipality of trip origin, planning district of trip origin, 2001 and 2006 traffic zone of trip origin, UTM X and Y coordinate of trip origin, Method used to geocode trip origin, destination purpose of the trip (second and subsequent school trips, daycare (not in 1986), entertainment (1986 only), facilitate passenger, home, linked trip (1991 only), marketing/ Shopping (not in 1991), second and subsequent work trips, first school trip of the day, first work trip of the day and others), regional municipality of trip destination, planning district of trip destination, 2001 and 2006 traffic zone of trip destination, UTM X and Y coordinate of trip destination, method used to geocode trip destination, straight line trip length in kilometres, manhattan distance trip length in kilometres).
-
- 
 The information collected through the TTS provides valuable insights into travel patterns in a given region. It can help transportation planners and policymakers better understand the needs of travelers and make informed decisions about transportation infrastructure and services. By analyzing the data collected through the TTS, planners can identify trends and patterns in travel behavior, such as the most popular modes of transportation and the busiest travel times, and use this information to develop more effective transportation policies and programs.
 
-
-### Autorité régionale de transport métropolitain survey (ARTM)
+# Autorité régionale de transport métropolitain survey (ARTM)
 
 The Montreal OD (Origin-Destination) survey is a large-scale cross-sectional household travel survey conducted every five years since 1970 in the Montreal metropolitan area (1970, 1974, 1978, 1982,1987, 1993, 1998, 2003, 2008, 2013, and 2018). The survey covers 5% of the population residing in the Montreal metropolitan area and is conducted by the Autorité Régionale de Transport Métropolitain (ARTM).
 
-Its purpose is to provide an accurate picture of all the trips made by residents of the region during an average weekday, for all modes of transportation used such as walking, cycling, bus, metro, train, and car. . They are descriptive surveys that provide a statistical portrait of the different characteristics of people's trips. For each documented trip, the surveys identify the origin, destination, purpose, departure time, and all the different modes of transport used. Other socio-demographic variables are also collected. This is primarily a survey conducted through telephone interviews that aims to provide a general overview of all trips made by residents of the region, regardless of the mode of transport used. For the first time, the 2018 OD survey included a web questionnaire component.In addition, this survey cover an increasingly larger territory that spans the entire metropolitan region, from the major cities of Montreal, Laval, and Longueuil, to the north and south crowns.
-
+Its purpose is to provide an accurate picture of all the trips made by residents of the region during an average weekday, for all modes of transportation used such as walking, cycling, bus, metro, train, and car. They are descriptive surveys that provide a statistical portrait of the different characteristics of people's trips. For each documented trip, the surveys identify the origin, destination, purpose, departure time, and all the different modes of transport used. Other socio-demographic variables are also collected. This is primarily a survey conducted through telephone interviews that aims to provide a general overview of all trips made by residents of the region, regardless of the mode of transport used. For the first time, the 2018 OD survey included a web questionnaire component. In addition, this survey cover an increasingly larger territory that spans the entire metropolitan region, from the major cities of Montreal, Laval, and Longueuil, to the north and south crowns.
 
 The survey collects detailed information on each trip made by all individuals in ***each surveyed household*** (such as home location, size,vehicle ownership, and number of cars), **each person in the household** (age, gender,income,education level, driving license ownership, main occupation, public transit monthly pass ownership), and **each trip** made by each person of 5 years and older ( such as departure time, origin and destination locations, trip purpose, mode sequence, and others).
 
+# Vancouver panel survey (VTS) \[https://vancouver.ca/streets-transportation/annual-transportation-survey.aspx\]
 
-### Vancouver panel survey (VTS) [@https://vancouver.ca/streets-transportation/annual-transportation-survey.aspx]
+The Vancouver Panel Survey is a longitudinal survey of households living in the city of Vancouver, British Columbia, Canada (Vancouver's nine transportation zones). The survey is conducted annually, and its primary goal is to provide a comprehensive picture of travel behavior and trends over time, as well as the impact of policies and interventions on these trends.The primary component of this survey is a travel diary in which individuals record the details of the trips that they make on an assigned weekday. This trip data is then compared to the previous panel surveys conducted from 2018 to 2019 (2008,2011, 2013 and 2019), allowing analysis of transportation trends.
 
-The 2020 Vancouver Panel Survey is a longitudinal survey of households living in the city of Vancouver, British Columbia, Canada (Vancouver’s nine transportation zones). The survey is conducted annually, and its primary goal is to provide a comprehensive picture of travel behavior and trends over time, as well as the impact of policies and interventions on these trends.The primary component of this survey is a travel diary in which individuals record the details of the trips that they make on an assigned weekday. This trip data is then compared to the previous panel surveys conducted from 2018 to 2019 (2008,2011, 2013 and 2019), allowing analysis of transportation trends.
-
-The survey collects detailed information on personal and household characteristics, including age, gender, income, education, and employment status. It also gathers information on travel behavior, including trip purpose (such as work, school, recreational/social/entertainment, home, work business trip, shopping, personal business, restaurant, drop off/pick up, and drive someone ), mode of transportation (Auto, transit,cycling, walking, and other), travel distance,start time for each of their recorded trips, travel time ,trip rates, VKT, origin-destination patterns (The daily origin and destination (O-D) patterns for Vancouver residents based on geocoded trip-end coordinates), average trip distances (Trip lengths were estimated using the distance matrix from TransLink’s Regional Transportation Model’s shortest distance assignment) and trip frequency.
+The survey collects detailed information on personal and household characteristics, including age, gender, income, education, and employment status. It also gathers information on travel behavior, including trip purpose (such as work, school, recreational/social/entertainment, home, work business trip, shopping, personal business, restaurant, drop off/pick up, and drive someone ), mode of transportation (Auto, transit,cycling, walking, and other), travel distance,start time for each of their recorded trips, travel time ,trip rates, VKT, origin-destination patterns (The daily origin and destination (O-D) patterns for Vancouver residents based on geocoded trip-end coordinates), average trip distances (Trip lengths were estimated using the distance matrix from TransLink's Regional Transportation Model's shortest distance assignment) and trip frequency.
 
 One of the unique features of the survey is the collection of data on active transportation, such as walking and cycling. This data is used to evaluate the effectiveness of policies and interventions aimed at promoting sustainable transportation modes.
 
 In addition to travel behavior and personal characteristics, the survey also collects information on attitudes and perceptions related to transportation and the built environment. This information is used to inform policies and interventions aimed at improving transportation options and promoting sustainable and healthy communities.
 
+# Origin- Destination survey of National Capital Region \[http://www.ncr-trans-rcn.ca/surveys/o-d-survey/\]
 
-
-### Origin- Destination survey of National Capital Region (@http://www.ncr-trans-rcn.ca/surveys/o-d-survey/)
-
-The Origin-Destination (OD) survey of National Capital Region (NCR) in Canada is a comprehensive travel survey that aims to gather detailed information on the travel behavior of residents in the region. This survey has been conducted in the years 1986, 1995, 2005 and 2011, and it is currently being conducted again in 2022.The Origin-Destination (O-D) Survey examines the “who, where, why, when, and how” of trips made by residents of the National Capital Region (NCR) resulting in extensive, up-to-date information on current daily trip patterns of area residents in rural areas, growing suburbs, mature neighbourhoods and downtown areas alike. The survey is a joint project of the TRANS Committee, made up of the National Capital Commission, the City of Ottawa, the City of Gatineau, the Ontario and Quebec Ministries of Transportation, and the transit agencies of Ottawa and Gatineau.
+The Origin-Destination (OD) survey of National Capital Region (NCR) in Canada is a comprehensive travel survey that aims to gather detailed information on the travel behavior of residents in the region. This survey has been conducted in the years 1986, 1995, 2005 and 2011, and it is currently being conducted again in 2022. The Origin-Destination (O-D) Survey examines the "who, where, why, when, and how" of trips made by residents of the National Capital Region (NCR) resulting in extensive, up-to-date information on current daily trip patterns of area residents in rural areas, growing suburbs, mature neighbourhoods and downtown areas alike. The survey is a joint project of the TRANS Committee, made up of the National Capital Commission, the City of Ottawa, the City of Gatineau, the Ontario and Quebec Ministries of Transportation, and the transit agencies of Ottawa and Gatineau.
 
 Total trip numbers account for the population of age 5 and older for the 2011 O-D survey and age 11 and older for the 2005 O-D survey. In addition, The survey did not capture commercial trips or trips generated outside of the National Capital Region. The survey is designed to capture all trips made by residents in the NCR, including the trip origin and destination (includes different districts in this region such as Ottawa Inner Area, Ottawa West, Merivale, Ottawa East, Alta Vista), purpose (such as home, work, school, shopping, leisure, personal and others(include visiting friends and family, health-related trips, and other), and pick up or drop off), time of travel, distance of travel, and mode of transportation. The survey covers a wide range of transportation modes, such as walking, cycling, public transit, and driving.
 
-The survey also collects personal and household information such as age, gender, income, education, household size, driver’s licence, household vehicle availability and employment status. These variables are used to understand how travel behavior varies by demographic groups and to identify potential disparities in access to transportation.
+The survey also collects personal and household information such as age, gender, income, education, household size, driver's licence, household vehicle availability and employment status. These variables are used to understand how travel behavior varies by demographic groups and to identify potential disparities in access to transportation.
 
+# Origin- Destination survey of Capital Regional District (CRD) \[https://www.crd.bc.ca/project/regional-transportation/origin-destination-household-travel\]
 
+The Capital Regional District (CRD) conducted a comprehensive trip diary (origin-destination, or O-D) survey. The survey profiles residents' travel behavior. The profile will aid the CRD in its Regional Growth Strategy, the Regional Transportation Plan, and other ongoing sustainable planning initiatives. The 2017 survey updates surveys that were conducted in 2011, 2006, and 2001.
 
-###  Origin- Destination survey of Capital Regional District (CRD) (@https://www.crd.bc.ca/project/regional-transportation/origin-destination-household-travel)
-
-The Capital Regional District (CRD) conducted a comprehensive trip diary (origin-destination, or O-D) survey. The survey profiles residents’ travel behavior. The profile will aid the CRD in its Regional Growth Strategy, the Regional Transportation Plan, and other ongoing sustainable planning initiatives. The 2017 survey updates surveys that were conducted in 2011, 2006, and 2001.
-
-The 2017 study area of the survey consisted of all 13 incorporated municipalities in the CRD, the Juan de Fuca Electoral Area and Salt Spring Island. Most of the reporting described below covers the 13 incorporated municipalities and the Juan de Fuca Electoral Area: this area corresponds to the area that is covered by the Regional Growth Strategy and is defined as the “Regional Planning Area” (RPA). Households from Salt Spring Island were included in order to build a better picture of travel between these regions and the RPA, and of the travel patterns of Salt Spring Island residents. The Southern Gulf Islands and the CVRD were not included.
-
+The 2017 study area of the survey consisted of all 13 incorporated municipalities in the CRD, the Juan de Fuca Electoral Area and Salt Spring Island. Most of the reporting described below covers the 13 incorporated municipalities and the Juan de Fuca Electoral Area: this area corresponds to the area that is covered by the Regional Growth Strategy and is defined as the "Regional Planning Area" (RPA). Households from Salt Spring Island were included in order to build a better picture of travel between these regions and the RPA, and of the travel patterns of Salt Spring Island residents. The Southern Gulf Islands and the CVRD were not included.
 
 Demographic variables
 
-The demographics of the RPA’s residents are important indicators of travel. The key factors are population (trips are made by people), households (members of households coordinate their trips includes households size, age, employment,  type of dwelling ) and the vehicle available to each household. 
+The demographics of the RPA's residents are important indicators of travel. The key factors are population (trips are made by people), households (members of households coordinate their trips includes households size, age, employment, type of dwelling ) and the vehicle available to each household.
 
 Travel variables
 
 The survey collects information on trip origins and destinations, travel modes used, trip purposes (such as Work / work-related, Post-secondary school , School, Personal business , Recreation / social , Dining / restaurant, Shopping, Pick-up / drop-off passengers, home, and others), and the time of day that trips are taken
 
-
-###  Origin- Destination survey of Nanaimo City
+# Origin- Destination survey of Nanaimo City
 
 The City of Nanaimo recently initiated the Nanaimo Transportation Master Plan (NTMP) process. In preparation for the development of the NTMP, the City undertook a Pre-Plan Consultation Process in 2011, which included open houses and surveys to identify key themes and priorities to be considered during the development of the NTMP.
 
@@ -455,8 +434,7 @@ The survey provides detailed information on the different modes of transportatio
 
 In addition to travel-related data, the survey also collects information on demographic factors such as age, gender, education level, income, and employment status. This data provides insights into how different groups of people travel within the city and helps identify any disparities in transportation access and mobility.
 
-
-### Edmonton and  Region Household  Travel Survey (ERHTS)[@https://www.edmonton.ca/transportation/traffic_reports/travel-pattern-analysis]
+# Edmonton and Region Household Travel Survey (ERHTS)\[https://www.edmonton.ca/transportation/traffic_reports/travel-pattern-analysis\]
 
 The Edmonton and Region Household Travel Survey (ERHTS) is a comprehensive travel survey conducted in the Edmonton Metropolitan Region, Alberta, Canada in 1994, 2005 and 2015.The ERHTS was conducted using a combination of online and paper-based surveys, with participants randomly selected from over 46,000 residential addresses in the Edmonton region.the report describes the weekday travel patterns of residents of the Edmonton Capital Region and travel between the Region and the City of Edmonton The survey collected data on travel behavior over a 24-hour weekday period, with participants being asked to report all trips taken, including their purpose, mode of transportation, and time of travel.
 
@@ -464,7 +442,7 @@ The survey aims to collect data on travel behavior patterns of households residi
 
 The survey found that the most common mode of transportation for all trip purposes was driving, with 78% of all trips being made by private vehicle. Walking was the second most common mode of transportation, accounting for 10% of all trips. Public transportation was used for only 6% of all trips, and cycling for 3% of all trips. The survey also found that the average trip distance was 8.7 km, and the average travel time was 29 minutes.
 
-### Calgary and Region Travel and Activity Survey (CARTAS) [@https://www.calgary.ca/planning/transportation/surveys.html?redirect=/travelsurveys]
+# Calgary and Region Travel and Activity Survey (CARTAS) \[https://www.calgary.ca/planning/transportation/surveys.html?redirect=/travelsurveys\]
 
 the Calgary and Region Travel and Activity Survey (CARTAS) conducted in 2012. Household travel surveys have been conducted approximately every 10 years since 1964 and provide key information to decision makers on how travel behavior and influences are changing over time. The CARTAS study area includes The City of Calgary, the Municipal District of Foothills, Rockyview County, Wheatland County, and all the towns and villages within those boundaries including: Airdrie, Chestermere, Cochrane, High River, Okotoks, Nanton, and Strathmore. The primary purpose for the survey is to collect information to update the Regional Transportation Model (RTM), but these surveys offer a unique insight in the characteristics of travel in Calgary and the surrounding region.
 
@@ -474,7 +452,7 @@ The personal variables collected in the survey include demographic information, 
 
 The survey data were used to analyze travel patterns and trends, assess transportation infrastructure needs, and evaluate the effectiveness of transportation policies and programs. The data have been made available to the public and can be used by researchers, policymakers, and other stakeholders to inform decision-making and planning related to transportation and urban development in Calgary and the surrounding areas.
 
-### City of Saskatoon Household Travel Survey
+# City of Saskatoon Household Travel Survey
 
 The 2013 Saskatoon Travel Survey is a comprehensive study of travel behavior in the city of Saskatoon, Canada. The survey was conducted in order to gather information about residents' travel habits, including mode choice, trip purposes, and travel times.
 
@@ -486,7 +464,7 @@ The survey also included a mode choice analysis to better understand the factors
 
 The data collected from the survey has been used to inform transportation planning and policy in Saskatoon, as well as to better understand the travel behavior of residents in the city. The information has been used to identify areas where improvements to the transportation system could be made, such as increasing transit service or building new cycling infrastructure.
 
-### Okanagan Travel Survey (OTS)
+# Okanagan Travel Survey (OTS)
 
 The City of Kelowna, City of Vernon, Regional District of Central Okanagan, West Kelowna, Lake Country, Peachland, and Westbank First Nation, along with the BC Ministry of Transportation and Infrastructure, have collaborated to conduct the Okanagan Travel Survey (OTS). The smartTRIPS program, which is a part of the Sustainable Transportation Partnership of the Central Okanagan (STPCO), supported the survey's execution. The OTS employs a methodology that involves conducting a household travel survey every five years in the Central Okanagan and City of Vernon region. This type of survey gathers information on the daily travel patterns of each household member who is five years of age or older, based on their travel on the previous day. This survey was conducted in 2007, 2013 and 2018. Like the objectives of the previous Okanagan Travel Surveys conducted in 2007 and 2013, the data collected through the 2018 OTS creates a repository of the travel habits of residents. This data can serve as a foundation for developing policies and transportation plans in the Central Okanagan and The City of Vernon. Additionally, the 2018 OTS contributes to the larger aim of tracking regional travel trends and establishing a regional transportation demand model for the area.
 
@@ -494,227 +472,349 @@ The Okanagan Travel Survey conducted in 2018 recorded the journeys taken by indi
 
 The 2018 survey was a household-based survey that collected demographic information on all household members and travel characteristics. data is as follow:
 
-* household data includes address, dwelling type, number of householders, number of vehicles available to householders, number of working bicycles available to householders, household Income.
+-   household data includes address, dwelling type, number of householders, number of vehicles available to householders, number of working bicycles available to householders, household Income.
 
-* Person level data for each person in the household includes gender, age, driver’s license, student status, school level, employed, employment status, workplace location, and type of occupation.
+-   Person level data for each person in the household includes gender, age, driver's license, student status, school level, employed, employment status, workplace location, and type of occupation.
 
-* Trip level data for each trip made by each household includes origin (Geocode origin XY coordinates), destination (Geocode destination XY coordinates), trip departure time, trip arrival time, trip purpose (or activity at destination location such as travel to Work, post-Secondary School, school, restaurant, recreation (gym, swimming, etc.), social outing / meet friends, shopping, personal business, pick up and drop off a passenger, home and others ), mode of travel (such as auto driver, auto passenger, public transit, school bus, bicycle, walked, motorcycle or moped/scooter), transit route(s), number of vehicle occupants, vehicle availability for trip (if not by automobile and household has vehicles), and additional information about trip (open-ended response).
+-   Trip level data for each trip made by each household includes origin (Geocode origin XY coordinates), destination (Geocode destination XY coordinates), trip departure time, trip arrival time, trip purpose (or activity at destination location such as travel to Work, post-Secondary School, school, restaurant, recreation (gym, swimming, etc.), social outing / meet friends, shopping, personal business, pick up and drop off a passenger, home and others ), mode of travel (such as auto driver, auto passenger, public transit, school bus, bicycle, walked, motorcycle or moped/scooter), transit route(s), number of vehicle occupants, vehicle availability for trip (if not by automobile and household has vehicles), and additional information about trip (open-ended response).
 
-### Winnipeg Area Travel Survey (WATS)
+# Winnipeg Area Travel Survey (WATS)
 
-the Winnipeg Area Travel Survey (WATS)is a travel ‘origin-destination’ survey that was conducted in autumn 2007. The survey covered the entire City of Winnipeg and all of the surrounding area within a 100-km radius of downtown Winnipeg. The 2007 WATS is the first all household based trip survey ever done in Winnipeg. In combination with traffic counts, on-board transit ridership counts and demographic and employment data from the Census of Canada and other sources, the 2007 survey provides both a reliable profile of current conditions and a means to measure trends in local travel.
+the Winnipeg Area Travel Survey (WATS)is a travel 'origin-destination' survey that was conducted in autumn 2007. The survey covered the entire City of Winnipeg and all of the surrounding area within a 100-km radius of downtown Winnipeg. The 2007 WATS is the first all household based trip survey ever done in Winnipeg. In combination with traffic counts, on-board transit ridership counts and demographic and employment data from the Census of Canada and other sources, the 2007 survey provides both a reliable profile of current conditions and a means to measure trends in local travel.
 
 Typical of origin-destination surveys, there are three categories: household data, person data and trip data. As noted, trip data were collected only for household members 11 years of age and older.The 2007 survey was a travel survey that collected demographic information on all household members and travel characteristics. dataset is as follow:
 
 Household data consists of location, household size, number of vehicles, type of dwelling, and household income.
 
-person data includes age, gender, driver’s license, occupation status (worker, student, retiree, etc.), usual place of work or school, long-term physical disability, labour force status, hours of work and education.
+person data includes age, gender, driver's license, occupation status (worker, student, retiree, etc.), usual place of work or school, long-term physical disability, labour force status, hours of work and education.
 
-Trip data includes origin, destinations, purpose of travel(such as work, work-related, school, shopping, social / recreational, restaurant, medical / dental visit, drive someone somewhere / go pick someone up, return home), mode(s) of travel (such as car driver, car passenger, Winnipeg Transit, intercity bus, other transit, private transportation service, school bus, water taxi3 / ferry, taxi, handi-Transit, bicycle, walk, and motorcycle / moped), departure time, arrival time, If transit: use of park and ride lot, line(s) used, transfer point(s). 
+Trip data includes origin, destinations, purpose of travel(such as work, work-related, school, shopping, social / recreational, restaurant, medical / dental visit, drive someone somewhere / go pick someone up, return home), mode(s) of travel (such as car driver, car passenger, Winnipeg Transit, intercity bus, other transit, private transportation service, school bus, water taxi3 / ferry, taxi, handi-Transit, bicycle, walk, and motorcycle / moped), departure time, arrival time, If transit: use of park and ride lot, line(s) used, transfer point(s).
 
-### The London Household Travel Survey
+# The London Household Travel Survey
 
 In 2016, the London Household Travel Survey was carried out to offer an in-depth understanding of the travel patterns of individuals residing in the City of London and the nearby Census Metropolitan Area. Vital data concerning travel making, preferences, and attitudes was collected during the survey to support the development of infrastructure and services for road users, public transport passengers, cyclists, and pedestrians. Earlier editions of this survey were conducted in 1987, 2002, and 2009. This Survey collected data on various variables related to households, persons, and trips.
 
-For households, the survey collected data on location of residence, the number of people living in the household, driver’s license, their age and gender, their employment status, and their income. It also gathered data on the type of dwelling, such as whether it was a single-family home or an apartment, and the availability of cars and bikes in the household.
+For households, the survey collected data on location of residence, the number of people living in the household, driver's license, their age and gender, their employment status, and their income. It also gathered data on the type of dwelling, such as whether it was a single-family home or an apartment, and the availability of cars and bikes in the household.
 
 For persons, the survey collected data on their age, gender, and employment status, as well as their level of education and income. It also asked about their travel behavior, such as how often they traveled, what modes of transportation they used, and their travel purposes.
 
 For trip data, the survey collected data on location of origin and destination for each trip, the purpose of the trip (work, post-secondary school, school, shopping/recreational, other discretionary), the mode of transportation used (such as auto driver, auto passenger, transit, walk/cycle and others), the time of day, the distance traveled, and the duration of the trip. It also gathered information on the origins and destinations of the trips, such as the home address and the location of the destination.
 
+# Kingston Household Travel Survey
 
-###  Kingston Household Travel Survey
-
-The 2019 Kingston Household Travel Survey (KHTS) was undertaken with a random sample of households in the City of Kingston. Previous household travel surveys of Kingston residents were conducted in 2002 and 2008. The 2019 survey builds on the legacy of the previous surveys while expanding the depth of the data collected and providing more detailed reporting on travel patterns captured by the survey. The survey gathered information on household and demographic characteristics relevant to understanding travel patterns. It also captured detailed trip information for residents aged 5+ years, providing a snapshot of the 24-hour travel patterns over the course of a typical fall weekday. 
+The 2019 Kingston Household Travel Survey (KHTS) was undertaken with a random sample of households in the City of Kingston. Previous household travel surveys of Kingston residents were conducted in 2002 and 2008. The 2019 survey builds on the legacy of the previous surveys while expanding the depth of the data collected and providing more detailed reporting on travel patterns captured by the survey. The survey gathered information on household and demographic characteristics relevant to understanding travel patterns. It also captured detailed trip information for residents aged 5+ years, providing a snapshot of the 24-hour travel patterns over the course of a typical fall weekday.
 
 The objectives of the survey were to gather information to assist the City of Kingston in transportation planning and to promote the use of sustainable modes of transportation, such as walking, cycling, and public transit. The survey aimed to identify travel patterns and behavior and to identify opportunities to reduce the reliance on single-occupancy vehicles.
 
 This survey collected information on various aspects of travel and socio-demographic characteristics, such as:
 
-* Household data consists of age, gender, income, student number in a household, type of dwellings, access to car, access to bicycle,transit Passes and employment status.
+-   Household data consists of age, gender, income, student number in a household, type of dwellings, access to car, access to bicycle,transit Passes and employment status.
 
-* Trip data includes frequency and purpose of trips (such as usual work, work related, post-secondary school, attend K-12 school, shopping, personal business, restaurant, recreation, social, serve passenger, return home, and other), modes of transportation used (such as auto Driver, auto Passenger, Kingston transit, School Bus, Walk, Bicycle, and others), trip distances, and travel times.
+-   Trip data includes frequency and purpose of trips (such as usual work, work related, post-secondary school, attend K-12 school, shopping, personal business, restaurant, recreation, social, serve passenger, return home, and other), modes of transportation used (such as auto Driver, auto Passenger, Kingston transit, School Bus, Walk, Bicycle, and others), trip distances, and travel times.
 
-### North Shore Transportation Survey
+# North Shore Transportation Survey
 
-The North Shore Transportation Survey (NSTS) 2019 is a biennial survey of residents of the North Shore that tracks key transportation metrics associated with residents’ travel patterns. The survey is an initiative of the City of North Vancouver (CNV), District of North Vancouver (DNV), and District of West Vancouver (DWV). This Survey collected data on various variables related to households, persons, and trips are as follows:
+The North Shore Transportation Survey (NSTS) 2019 is a biennial survey of residents of the North Shore that tracks key transportation metrics associated with residents' travel patterns. The survey is an initiative of the City of North Vancouver (CNV), District of North Vancouver (DNV), and District of West Vancouver (DWV). This Survey collected data on various variables related to households, persons, and trips are as follows:
 
-* Participant Characteristics: describes the characteristics of North Shore residents and their households, as captured by the survey, including age, gender, household, employment, health status, occupation, bike access, and vehicle access characteristics. The purpose of capturing these characteristics is to better understand travellers’ needs, challenges, and patterns. The results are based on the survey sample with selected information from the 2016 census.
+-   Participant Characteristics: describes the characteristics of North Shore residents and their households, as captured by the survey, including age, gender, household, employment, health status, occupation, bike access, and vehicle access characteristics. The purpose of capturing these characteristics is to better understand travellers' needs, challenges, and patterns. The results are based on the survey sample with selected information from the 2016 census.
 
-* Daily trip characteristics: provides a snapshot of daily (24-hour) travel patterns from the trips reported by survey participants and includes location, trip demand, purpose (such as usual work, work related, school, personal business, restaurant, recreation, social, serve passenger, return home and others ), mode share (Auto Driver, Auto Passenger, Transit, Walk, bicycle, and others), and distribution (include the trip origin and destinations).
+-   Daily trip characteristics: provides a snapshot of daily (24-hour) travel patterns from the trips reported by survey participants and includes location, trip demand, purpose (such as usual work, work related, school, personal business, restaurant, recreation, social, serve passenger, return home and others ), mode share (Auto Driver, Auto Passenger, Transit, Walk, bicycle, and others), and distribution (include the trip origin and destinations).
 
+\Table 7, available data in different households travel surveys.
 
-\`
+```{r}
 
-Table 7, available data in different households travel surveys.
+library(kableExtra)
 
-| Survey                                                        	| Year of Survey 	| Household Data                           	| Person Data                           	| Trip Data                                  	|
-|---------------------------------------------------------------	|----------------	|------------------------------------------	|---------------------------------------	|--------------------------------------------	|
-| General social survey (GSS)                                   	| 1986           	| Dwelling type                            	| Gender                                	| Mode(s) of travel                          	|
-|                                                               	| 1992           	| Household size                           	| Age                                   	| Purpose of travel                          	|
-|                                                               	| 1998           	| Household income                         	| Student status                        	| Start Time                                 	|
-|                                                               	| 2005           	|                                          	| School level                          	| End Time                                   	|
-|                                                               	| 2015           	|                                          	| Employment status                     	|                                            	|
-| Transportation Tomorrow Survey survey (TTS)                   	| 1991           	| Regional municipality of household       	| person number within the household    	| trip number for persons in household       	|
-|                                                               	| 1996           	| geocode of household                     	| Age                                   	| start time                                 	|
-|                                                               	| 2001           	| Type of dwelling unit                    	| Gender                                	| End Time                                   	|
-|                                                               	| 2006           	| Number of persons in the household       	| Transit pass                          	| Mode of the trip                           	|
-|                                                               	| 2011           	| Number of vehicles                       	| employment status of the person       	| Purpose of the trip                        	|
-|                                                               	| 2016           	| driver’s licence in the household        	| person’s occupation type              	| Geocode of origins and destinations        	|
-|                                                               	|                	| Household’s total income                 	| student status of person              	|                                            	|
-|                                                               	|                	|                                          	| school codes                          	|                                            	|
-| Autorité régionale de transport métropolitain survey (ARTM)   	| 1970           	| home location                            	| Age                                   	| Origins location                           	|
-|                                                               	| 1974           	| size of household                        	| Gender                                	| Destination location                       	|
-|                                                               	| 1978           	| vehicle ownership                        	| Income                                	| Trip purpose                               	|
-|                                                               	| 1982           	| number of cars in households             	| Education level                       	| Mode of transportation                     	|
-|                                                               	| 1987           	|                                          	| Driving license ownership             	| Start time                                 	|
-|                                                               	| 1993           	|                                          	| Main occupation                       	| End time                                   	|
-|                                                               	| 1998           	|                                          	| Public transit monthly pass ownership 	|                                            	|
-|                                                               	| 2003           	|                                          	|                                       	|                                            	|
-|                                                               	| 2008           	|                                          	|                                       	|                                            	|
-|                                                               	| 2013           	|                                          	|                                       	|                                            	|
-|                                                               	| 2018           	|                                          	|                                       	|                                            	|
-| Vancouver panel survey (VTS)                                  	| 2008           	| Home location                            	| age                                   	| trip purpose                               	|
-|                                                               	| 2011           	| Size of household                        	| gender                                	| mode of transportation                     	|
-|                                                               	| 2013           	| vehicle ownership                        	| income                                	| travel distance                            	|
-|                                                               	| 2019           	|                                          	| education                             	| Start Time                                 	|
-|                                                               	|                	|                                          	| employment                            	| End time                                   	|
-|                                                               	|                	|                                          	|                                       	| geocoded origin and destination            	|
-|                                                               	|                	|                                          	|                                       	| trip frequency                             	|
-| Origin- Destination survey of National Capital Region         	| 1986           	| Size of household                        	| age                                   	| Trip origion and destination               	|
-|                                                               	| 1995           	| household vehicle availability           	| gender                                	| purpose of trip                            	|
-|                                                               	| 2005           	| vehicle ownership                        	| Income                                	| Time of travel                             	|
-|                                                               	| 2011           	|                                          	| Education                             	| mode of transportation                     	|
-|                                                               	|                	|                                          	| driver’s licence                      	|                                            	|
-|                                                               	|                	|                                          	| employment status                     	|                                            	|
-| Origin- Destination survey of Capital Regional District (CRD) 	| 2001           	| Households size                          	| age                                   	| trip origins and destinations              	|
-|                                                               	| 2006           	| type of dwelling                         	| Gender                                	| travel modes                               	|
-|                                                               	| 2011           	| vehicle available to each household      	| employment                            	| trip purposes                              	|
-|                                                               	| 2016           	|                                          	|                                       	| Start time                                 	|
-|                                                               	|                	|                                          	|                                       	| End Time                                   	|
-| Origin- Destination survey of Nanaimo City                    	| 2011           	| Household size                           	| age                                   	| purpose of the trip                        	|
-|                                                               	|                	| Type of Dwelling                         	| gender                                	| mode of transportation                     	|
-|                                                               	|                	| Number of vehicle                        	| education level                       	| trip distance                              	|
-|                                                               	|                	|                                          	| income                                	| trip duration                              	|
-|                                                               	|                	|                                          	| employment status                     	|                                            	|
-| Edmonton and  Region Household  Travel Survey (ERHTS)         	| 1994           	| household income                         	| age                                   	| number of trips                            	|
-|                                                               	| 2005           	| number of household members              	| gender                                	| trip duration                              	|
-|                                                               	| 2015           	| Type of dwelling                         	| education level                       	| distance traveled                          	|
-|                                                               	|                	| Number of vehicle                        	| employment status                     	| mode of transportation                     	|
-|                                                               	|                	|                                          	|                                       	| travel purpose                             	|
-|                                                               	|                	|                                          	|                                       	| travel time                                	|
-| Calgary and Region Travel and Activity Survey (CARTAS)        	| 2012           	| number of people in the household        	| age                                   	| frequency of travel                        	|
-|                                                               	|                	| number of vehicles                       	| gender                                	| length of trips                            	|
-|                                                               	|                	| Household income                         	| income                                	| Mode of transportation                     	|
-|                                                               	|                	| Number of vehicle                        	| education level                       	| trip purpose                               	|
-|                                                               	|                	|                                          	| employment status                     	| Start time                                 	|
-|                                                               	|                	|                                          	|                                       	| End time                                   	|
-| City of Saskatoon Household Travel Survey                     	| 2013           	| household size                           	| age                                   	| trip purpose                               	|
-|                                                               	|                	| Household income                         	| gender                                	| mode of transportation                     	|
-|                                                               	|                	| Number of vehicle                        	| employment status                     	| origin and destination                     	|
-|                                                               	|                	|                                          	|                                       	| time of travel                             	|
-|                                                               	|                	|                                          	|                                       	| travel distance                            	|
-| Okanagan Travel Survey (OTS)                                  	| 2007           	| Location                                 	| gender                                	| Geocode origin and destination coordinates 	|
-|                                                               	| 2013           	| dwelling type                            	| age                                   	| Trip departure time                        	|
-|                                                               	| 2018           	| number of householdes                    	| driver’s license                      	| trip arrival time                          	|
-|                                                               	|                	| number of vehicle                        	| student status                        	| trip purpose                               	|
-|                                                               	|                	| number of bicycle                        	| school level                          	| mode of travel                             	|
-|                                                               	|                	| household Income                         	| employment level                      	|                                            	|
-|                                                               	|                	|                                          	| workplace location                    	|                                            	|
-|                                                               	|                	|                                          	| type of occupation                    	|                                            	|
-| Winnipeg Area Travel Survey (WATS)                            	| 2007           	| household size                           	| age                                   	| origin and destinations                    	|
-|                                                               	|                	| number of vehicles                       	| Gender                                	| purpose of travel                          	|
-|                                                               	|                	| type of dwelling                         	| driver’s license                      	| mode(s) of travel                          	|
-|                                                               	|                	| household income                         	| occupation status                     	| departure time                             	|
-|                                                               	|                	|                                          	| usual place of work or school         	| arrival time                               	|
-|                                                               	|                	|                                          	| labor force status                    	|                                            	|
-| The London Household Travel Survey                            	| 1987           	| location of residence                    	| driver’s license                      	|                                            	|
-|                                                               	| 2002           	| number of people living in the household 	| age                                   	| modes of transportation                    	|
-|                                                               	| 2009           	| type of dwelling                         	| gender                                	| travel purposes                            	|
-|                                                               	| 2016           	| availability of cars                     	| employment status                     	| Start time                                 	|
-|                                                               	|                	| availability of bicycle                  	| Income                                	| End time                                   	|
-|                                                               	|                	|                                          	|                                       	| location of origin and destination         	|
-|                                                               	|                	|                                          	|                                       	| distance traveled                          	|
-| Kingston Household Travel Survey                              	| 2002           	| type of dwellings                        	| age                                   	| frequency of trip                          	|
-|                                                               	| 2008           	| student number in a household            	| gender                                	| purpose of trips                           	|
-|                                                               	| 2019           	| access to car                            	| income                                	| modes of transportation                    	|
-|                                                               	|                	| access to bicycle                        	| employment status                     	| trip distances                             	|
-|                                                               	|                	| transit Passes                           	|                                       	| travel times                               	|
-| North Shore Transportation Survey (NSTS)                      	| 2019           	| household employment                     	| age                                   	| location of origin and destination         	|
-|                                                               	|                	| health status                            	| gender                                	| trip demand                                	|
-|                                                               	|                	|                                          	| occupation                            	| purpose of travel                          	|
-|                                                               	|                	|                                          	| bike access                           	| mode of travel                             	|
-|                                                               	|                	|                                          	| vehicle access                        	| origin and destination                     	|
+# Create the table data
+Survey <- c("General social survey (GSS)", "", "", "", "", "Transportation Tomorrow Survey survey (TTS)", "", "", "", "", "", "", "", "Autorité régionale de transport métropolitain survey (ARTM)", "", "", "", "", "", "", "", "", "", "", "Vancouver panel survey (VTS)", "", "", "", "", "", "", "Origin-Destination survey of National Capital Region", "", "", "", "", "", "Origin-Destination survey of Capital Regional District (CRD)", "", "", "", "", "Origin-Destination survey of Nanaimo City", "", "", "", "", "Edmonton and Region Household Travel Survey (ERHTS)", "", "", "", "", "", "Calgary and Region Travel and Activity Survey (CARTAS)", "", "", "", "", "", "City of Saskatoon Household Travel Survey", "", "", "", "", "Okanagan Travel Survey (OTS)", "", "", "", "", "", "", "", "Winnipeg Area Travel Survey (WATS)", "", "", "", "", "", "The London Household Travel Survey", "", "", "", "", "", "Kingston Household Travel Survey", "", "", "", "","North Shore Transportation Survey (NSTS)", "", "", "", "", "")
 
+Year_of_Survey <- c("1986", "1992", "1998", "2005", "2015", "1991", "1996", "2001", "2006", "2011", "2016", "", "", "1970", "1974", "1978", "1982", "1987", "1993", "1998", "2003", "2008", "2013", "2018", "2008", "2011", "2013", "2019","", "", "", "1986", "1995", "2005", "2011", "", "", "2001","2006", "2011", "2016", "", "2011", "", "", "", "", "1994", "2005", "2015", "", "", "", "2012", "", "", "", "", "", "2013", "", "", "", "", "2007", "2013", "2018", "", "", "", "", "", "2007", "", "", "", "", "", "1987", "2002", "2009", "2016", "", "", "2002", "2008", "2019", "", "", "2019", "", "", "", "", "")
+Year_of_Survey <- c(Year_of_Survey, rep(NA, length(Survey) - length(Year_of_Survey)))
 
+Household_Data <- c("Dwelling type", "Household size", "Household income", "", "", "Regional municipality of household", "geocode of household", "Type of dwelling unit", "Number of persons in the household", "Number of vehicles", "driver’s licence in the household","Household’s total income", "", "Home location", "Size of household", "Vehicle ownership", "number of cars in households", "", "", "","", "", "", "", "Home location","Size of household", "Vehicle ownership","", "", "", "", "Size of household", "household vehicle availability", "vehicle ownership", "", "", "","Households size", "Type of dwelling", "vehicle available to each household", "", "", "Household size", "Type of Dwelling", "Number of vehicle", "", "", "Household income", "Number of household members","Type of dwelling", "Number of vehicle", "", "", "number of people in the household","number of vehicles","Household income", "Number of vehicle","","", "Household size", "Household income", "Number of vehicle", "", "", "Location", "Dwelling type", "Number of householdes", "Number of vehicle", "Number of bicycle", "Household Income", "", "", "household size", "Number of vehicles", "Type of dwelling", "Household income", "", "", "Location of residence", "Number of people living in the household", "Type of dwelling", "Availability of cars", "Availability of bicycle" , "", "Type of dwellings", "student number in a household", "Access to car", "Access to bicycle", "Transit Passes", "Household employment", "health status", "bike access", "vehicle access", "", "")
+Household_Data <- c(Household_Data, rep(NA, length(Survey) - length(Household_Data)))
 
-### The Linkable Open Data Environment (LOD)
+Person_Data <- c("Gender", "Age", "Student status", "School level", "Employment status", "Person number within the household", "Age", "Gender", "Transit pass", "Employment status of the person", "Person’s occupation type", "Student status of person", "School codes", "Age", "Gender", "Income", "Education level", "Driving license ownership", "Main occupation", "Public transit monthly pass ownership", "", "", "", "", "Age", "Gender", "Income", "Education", "Employment", "", "", "Age", "Gender", "Income","Education", "driver’s licence", "Employment status", "Age", "Gender", "Employment", "", "", "Age", "Gender", "Employment status","Income","Education",  "Age", "Gender", "Employment status", "Education", "", "", "Age", "Gender", "Income", "Education", "Employment", "", "Age", "Gender", "Employment status", "", "", "Age", "Gender", "Driver’s licence", "Student status", "School level", "Employment level", "Workplace location", "Type of occupation", "Age", "Gender", "Driver’s licence", "Occupation status", "Usual place of work or school", "Labor force status", "Age", "Gender", "Driver’s licence", "Employment status","Income", "", "Age", "Gender",  "Employment status","Income", "", "Age", "Gender", "", "", "", "")
+Person_Data <- c(Person_Data, rep(NA, length(Survey) - length(Person_Data)))
 
-the Linkable Open Data Environment (LODE) is an exploratory initiative that aims at enhancing the use and harmonization of open microdata primarily from municipal, provincial and federal sources. It has been compiled by the Centre for Special Business Projects (CSBP) at Statistics Canada in 2020. 
+Trip_Data <- c("Mode(s) of travel", "Purpose of travel", "Start Time", "End Time", "", "Trip number for persons in household", "Start Time", "End Time", "Mode of the trip", "Purpose of the trip", "Geocode of origins and destinations", "", "", "Origins location", "Destination location", "Trip purpose", "Mode of transportation", "Start Time", "End Time", "", "", "", "", "", "Trip purpose", "Mode of transportation", "Travel distance", "Start Time", "End Time", "Geocoded origin and destination", "Trip frequency", "Trip origion and destination", "purpose of trip", "Time of travel", "Mode of transportation", "", "", "Trip origins and destinations", "travel modes", "trip purposes", "Start Time", "End Time", "Purpose of the trip", "Mode of transportation", "Trip distance", "Trip duration", "", "Number of trips", "Trip duration", "Distance traveled", "Mode of transportation", "Travel purpose", "Travel time", "Frequency of travel", "Length of trips", "Mode of transportation", "Trip purpose","Start Time", "End Time", "Trip purpose", "Mode of transportation", "Origin and destination", "Time of travel", "Travel distance", "Geocode origin and destination coordinates", "Trip departure time", "Trip arrival time", "Trip purpose", "Mode of travel", "", "", "", "Origin and destinations", "Purpose of travel", "Mode(s) of travel", "Departure time", "Arrival time", "", "Modes of transportation", "Travel purposes", "Start Time", "End Time", "Location of origin and destination", "Distance traveled", "Frequency of trip", "Purpose of trips", "Modes of transportation", "Trip distances", "Travel times","Location of origin and destination", "Trip demand", "Purpose of travel", "Mode of travel", "Origin and destination", "Occupation")
+Trip_Data <- c(Trip_Data, rep(NA, length(Survey) - length(Trip_Data)))
+
+table_data <- data.frame(
+  Survey = Survey,
+  Year_of_Survey = Year_of_Survey,
+  Household_Data = Household_Data,
+  Person_Data = Person_Data,
+  Trip_Data = Trip_Data
+)
+
+# Generate the table using kable() function
+kable(table_data, format = "html") %>%
+  kable_classic() %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, font_size = 12) %>%
+  row_spec(0, bold = T)
+```
+
+# The Linkable Open Data Environment (LOD)
+
+the Linkable Open Data Environment (LODE) is an exploratory initiative that aims at enhancing the use and harmonization of open microdata primarily from municipal, provincial and federal sources. It has been compiled by the Centre for Special Business Projects (CSBP) at Statistics Canada in 2020.
 
 This database includes variables such as address, postal code, city, province and latitude and longitude of each facility and includes a Canada-wide Open Database of educational facilities (this database covers facilities such as ***early childhood education, kindergarten, elementary, secondary, and post-secondary institutions***, and ***specific vocational training centers***. The database does not include virtual educational institutions.), healthcare facilities (including ambulatory health care services, hospitals, and nursing and residential care facilities), cultural and art facilities (such as arts or cultural centers, artists, festival sites, galleries, heritage or historic site, library or archive, museum, theatre/performance and concert hall, and miscellaneous), and recreational and sports facilities (including trails(such as urban and rural trails or pathways for walking, hiking, or biking), sports fields, arenas (facilities where sports and/or recreational activities take place), athletic parks, beaches, casinos, community centers, gyms, marinas, parks and green spaces, playgrounds, pools, race tracks, ice rinks, skate parks, splash pads, stadiums, miscellaneous), and Businesses (this database contains addresses of business, name, type of business and locations).
 
+-   The Open Database of Buildings \[https://www.statcan.gc.ca/en/lode/databases/odb\]
 
-* The Open Database of Buildings (@https://www.statcan.gc.ca/en/lode/databases/odb)
+The inputs for the ODB are datasets provided by municipal, regional or provincial sources available to the general public through open government portals under various types of open data licenses. The current version of the database (version 2.0) contains approximately 4.4 million records and includes provinces and territories where open building footprints were found during the collection period.Within the original datasets, each data provider attached a different set of variables to their building footprints.The variables included in the ODB are as follows:Latitude,Longitude,Area,Perimeter, Data provider, Census subdivision unique identifier, Census subdivision, name, Unique building ID
 
-The inputs for the ODB are datasets provided by municipal, regional or provincial sources available to the general public through open government portals under various types of open data licenses. The current version of the database (version 2.0) contains approximately 4.4 million records and includes provinces and territories where open building footprints were found during the collection period.Within the original datasets, each data provider attached a different set of variables to their building footprints.The variables included in the ODB are as follows:Latitude,Longitude,Area,Perimeter, Data provider, Census subdivision unique identifier, Census subdivision, name, Unique building ID 
-
-* The Open Database of Educational Facilities (@https://www.statcan.gc.ca/en/lode/databases/odef)
+-   The Open Database of Educational Facilities \[https://www.statcan.gc.ca/en/lode/databases/odef\]
 
 The Open Database of Educational Facilities (ODEF) is a collection of open data containing the names, types, and locations of education facilities across Canada, and is made available under the Open Government Licence - Canada.The inputs for the ODEF are primarily datasets provided by municipal, regional or provincial sources available to the general public through open government portals under various types of open data licences, or otherwise published on their webpages and released under an open licence with their permission.The variables included in the ODEF are as follows: Facility Name, Facility Type, Authority Name, International Standard Classification of Education (ISCED) ,Level, Official Language Minority School Status, Address, Unit, Street Number, Street Name, Municipality Name, Province, Postal Code, Province Unique Identifier, Census Subdivision Name, Census Subdivision Unique Identifier, Census Metropolitan Area Name, Census Metropolitan Area Unique Identifier, Longitude, Latitude, Geocoding Source, Source ID, Unique ID.
 
-* The Open Database of Healthcare Facilities (@https://www.statcan.gc.ca/en/lode/databases/odhf)
+-   The Open Database of Healthcare Facilities \[https://www.statcan.gc.ca/en/lode/databases/odhf\]
 
 The inputs for the ODHF are datasets whose sources include regional health authorities, provincial, territorial and municipal governments, and public healthcare and professional healthcare bodies. These datasets were available either under one of the various types of open data licences, e.g., in an open government portal, or as publicly available data. In certain cases, data were obtained directly from administrative sources. Details of the sources used are available in the ODHF metadata. This dataset includes ambulatory health care services, hospitals, and nursing and residential care facilities.The variables included in the ODHF are as follows: Index, Facility Name, Source Facility, Type, ODHF Facility Type, Provider, Unit, Street Number, Street Name, Postal Code, City, Province or Territory , Source-Format Street Address, Census Subdivision Name, Census Subdivision Unique Identifier, Province or Territory Unique Identifier, , Latitude ,Longitude.
 
-* The Open Database of Cultural and Art Facilities (@https://www.statcan.gc.ca/en/lode/databases/odcaf)
+-   The Open Database of Cultural and Art Facilities \[https://www.statcan.gc.ca/en/lode/databases/odcaf\]
 
-The Open Database of Cultural and Art Facilities (ODCAF) is a collection of open data containing the names, types, and locations of cultural and art facilities across Canada.This dataset includes arts or cultural centers, artists, festival sites, galleries, heritage or historic site, library or archive, museum, theatre/performance and concert hall, and miscellaneous. 
+The Open Database of Cultural and Art Facilities (ODCAF) is a collection of open data containing the names, types, and locations of cultural and art facilities across Canada.This dataset includes arts or cultural centers, artists, festival sites, galleries, heritage or historic site, library or archive, museum, theatre/performance and concert hall, and miscellaneous.
 
-
-* The Open Database of Recreational and Sport Facilities (@https://www.statcan.gc.ca/en/lode/databases/odrsf)
+-   The Open Database of Recreational and Sport Facilities \[https://www.statcan.gc.ca/en/lode/databases/odrsf\]
 
 The Open Database of Recreational and Sport Facilities (ODRSF) is a collection of open data containing the names, types, and locations of recreational and sport facilities across Canada. recreational and sports facilities includes trails(such as urban and rural trails or pathways for walking, hiking, or biking), sports fields, arenas (facilities where sports and/or recreational activities take place), athletic parks, beaches, casinos, community centers, gyms, marinas, parks and green spaces, playgrounds, pools, race tracks, ice rinks, skate parks, splash pads, stadiums, miscellaneous).
 
-* The Open Database of Businesses
+-   The Open Database of Businesses
 
 The Open Database of Businesses contains addresses of business name and locations. It also includes information on the type of business and legal nature of business, when supplied by the data providers.
 
-* The Open Database of Infrastructures
+-   The Open Database of Infrastructures
 
 The Open Database of Infrastructure contains the name and location of major transport and physical infrastructures such as airports, railway stations, bridges and elevated roads, etc. Infrastructures are classified by type. Records are compiled from both open sources and from publicly available data (with permission from the data owners).
 
+# Can-BICS
 
-**Cycling and walking networks**
-
-Cycling and walking networks can be obtained from different sources such as Can-BICS, open street map (OSM), and municipal open data.
+-   Cycling and walking networks
 
 Can-BICS is a classification system of five broad bicycle facilities assigned to three categories: high, medium, and low comfort, based on the facility's contribution to user safety and comfort while cycling. 1) High comfort includes low-stress routes that are comfortable for most people, including those of all ages and abilities, with a record for best safety. for example, cycle track, local street bikeway, and bike path. 2) medium comfort is low- or medium-stress routes that are comfortable for some people, but whose safety requires careful design, such as multi-use paths (A two-way paved path shared by cyclists, pedestrians and other users). 3) low comfort bikeways are high-stress routes that are comfortable for few people, with little or no additional safety, compared to no bicycle facility, such as painted bike lanes that are designated by bicycle and diamond pavement markings and signs as exclusively for cyclists. And 4) non-conforming bicycle facilities do not meet minimum Can-BICS standards, such as non-conforming - trail (these are multi-use trails with unpaved surface), non-conforming -- major road (shared lanes on major roads provide connectivity), and non-conforming - other.
 
-Can-BICS measured bicycle infrastructure for all communities in Canada, at the neighborhood level, using open data sources such as OpenStreetMap (OSM). 
+# OpenStreetMap (OSM)
+
+-   Cycling and walking networks
+
 Another source for obtaining cycling and walking networks is OpenStreetMap (OSM). This dataset is a collaborative global map that using for active transportation researches. OSM considered cycle lanes, tracks and sidewalks. A cycle lane lies within the roadway itself (on-road), whereas a cycle track is separate from the road (off-road). Tracks are typically separated from the road by e.g. curbs, parking lots, grass verges, trees, etc. as well, trails line that indicates the paths or routes suitable for walking, hiking, bicycling, and other outdoor activities from 2015 to 2019 can be obtained from scholars Geoportal.
 
-As well, municipal open data is a standard source of bicycling infrastructure data that city governments are making this spatial data for bicycling infrastructure. In Canada, some cities have this dataset such as Toronto, Montreal, Vancouver, etc. However, open data of different cities use different definitions for bicycling infrastructure, and they may have different levels of timeliness, completeness, and documentation [@schoner2014missing]. For example, bicycle facilities the City of Toronto Open Data portal consists of a high-resolution geospatial data set with attributes accumulated from several sources of cycle tracks or bike lanes, road classification (local, collector, minor arterial, etc.), number of lanes, directions, stop signs and signalized intersections. (City of Toronto, 2017).
+# Municipal open data
 
-**Spatial data (boundary, land use, postal code, etc)**
+Municipal open data is a standard source of bicycling infrastructure data that city governments are making this spatial data for bicycling infrastructure. In Canada, some cities have this dataset such as Toronto, Montreal, Vancouver, etc. However, open data of different cities use different definitions for bicycling infrastructure, and they may have different levels of timeliness, completeness, and documentation [@schoner2014missing]. For example, bicycle facilities the City of Toronto Open Data portal consists of a high-resolution geospatial data set with attributes accumulated from several sources of cycle tracks or bike lanes, road classification (local, collector, minor arterial, etc.), number of lanes, directions, stop signs and signalized intersections. (City of Toronto, 2017).
 
-Spatial data such as boundary, land use, postal code, origin and destinations and etc can be obtained from scholars Geoportal and open street map (OMP).
+## (City of Toronto)\[https://open.toronto.ca/catalogue/?search=point&sort=score%20desc\]
 
-scholars Geoportal has different shape file layers such as Land Cover Region (including seven land use categories: commercial; government and institutional; open area; parks and recreational; residential; resource and industrial; or waterbody in 2019), education Point (includes the point locations of elementary schools, high schools, colleges, cégeps and universities in 2020.There is also additional information about teaching languages and grade levels), enhanced Points of Interest (EPOI) in 2019, which indicates the locations of business and recreational points of interest across Canada in 2020, Healthcare (HCR) that contains the location of hospitals, long-term care facilities, outpatient clinics, nursing stations, and community health centres in 2020, Tourist Attractions Point that indicates the point locations for various tourist sites (such as National, Provincial, and Municipal parks, Art Galleries, Historic Sites, Museums, Science Centres, Tourist Information Booths, and Zoos) in 2020, Park sports field point in 2019 across Canada, Cinemas Point, Religious Buildings Point, Retail Point that indicates the locations shopping centers and department stores in 2020, and accommodations Point such as hotels, motels, campgrounds, inns, hostels, resorts, etc., in Canada.
+**Cycling and pedestrian Networks**
+
+The Toronto bikeways dataset illustrates the existing cycling network across the city, including both shared and dedicated bikeways. The Toronto bikeways dataset contains the following types of bikeways: cycle tracks, bicycle lanes (including buffered bike lanes and contra-flow bike lanes), neighbourhood routes with sharrows (including wayfinding sharrows), multi-use trails (including off-road and in-boulevard), as well as signed cycling routes.
+
+The Pedestrian Network (pednet) was created by the DAV team at the City of Toronto, and it is based on the sidewalk inventory from Transportation Services, Toronto road centrelines, and manual collection from aerial imagery. Pednet is integrated with centerline intersections, traffic signals, pedestrian crosswalks and crossovers, traffic signal data from Transportation Services as well as other City of Toronto datasets.
+
+**Points of Interest (POI)** :
+
+-   Cultural Hotspot: The Cultural Hotspot covers a wide range of locations and diverse neighborhoods, each with its own distinct characteristics. This dataset provides information about attractions that are of interest to both locals and tourists, including public art installations, murals, historically and architecturally significant buildings, parks, restaurants, and other noteworthy establishments.
+
+-   School Locations - All Types : The present dataset encompasses a geographical file specifically designed for the City of Toronto, encompassing the entirety of the points denoting the locations of schools. Furthermore, the dataset includes information regarding private schools.
+
+-   Green Spaces : This dataset includes parks and various other open spaces within the City of Toronto.
+
+**Land use and Land cover**
+
+-   Property Boundaries: This data is a GIS file that outlines the geographical area of all properties in the City of Toronto.
+
+-   Park and Recreation Facility: This dataset provides information on the recreation facilities administered by Toronto's Parks, Forestry and Recreation Division.
+
+-   Green Spaces includes parks and various other open spaces within the City of Toronto.
+
+## [City of Hamilton](https://open.hamilton.ca/)
+
+**Cycling and pedestrian Networks**
+
+-   Recreational Pathways
+
+Pathway is defined as: land dedicated to pathway use, pathway is mapped, signage exists, and have a recreational purpose. Pathways may support a range of non-motorized recreational uses such as walking, hiking, and bicycling. It includes the length (kilometers) of all paved and unpaved maintained recreational pathways that fall under municipal responsibility or control and if the municipality incurs costs to maintain those pathways. This data excludes non developed footpaths, sidewalks, and pathways that link to roadways and does not include unpaved trails maintained by others, such as the Bruce Trail and other similar trail systems.
+
+-   Trails This dataset includes location of recreational trails that are either owned or maintained by City of Hamilton, includes both walking/hiking trails and off-street bikeways. Types include:
+
+Multi-Use Path Paved Multi-Use Recreational Trail Unpaved (Stone) Multi-Use Recreational Trail Stairs (with or without Bicycle troughs) Trail/Cycling Networks (Trans Canada, Waterfront, others)
+
+-   Road Sidewalk This dataset includes the edge of the sidewalks in Hamilton and it captured from the 2019 aerial photography
+
+-   Bikeways The dataset encompasses the currently available on-street bikeways in Hamilton, which incorporates proposed enhancements and infrastructural linkages to neighboring municipalities. The bikeways consist of various types, including Designated Bike Lanes, Bicycle Paths, Bike Routes (both cautionary un-signed and signed on-street), and Paved Shoulders.
+
+**Land use and Land cover**
+
+-   Housing Placements
+
+Housing Placements depicted are the initial occurrence that housing has been secured for unique individuals participating in a City-funded homelessness program: Intensive Case Management (ICM), Rapid Re-housing (RRH), and Transitional Living Program (TLP).
+
+**Points of Interest (POI)**
+
+-   Hospitals: includes location of hospitals in Hamilton (2022).
+
+-   libraries: This dataset showcases the locations of libraries in Hamilton. The latest version of this dataset was released in 2022.
+
+-   Park Sports Fields: The dataset at hand comprises a comprehensive inventory of sports fields located in Hamilton. It encompasses a wide range of sporting facilities, including soccer fields, baseball diamonds, tennis courts, and various other venues.
+
+-   Places of Worship : Location of buildings used for religious congregations.
+
+-   Recreation and Community Centers contains location of recreation and community centers in Hamilton.
+
+-   Tourism Points of Interest that includes location of points of interest in Hamilton.
+
+-   Beaches: This data contains location of City of Hamilton public recreational swimming beaches.
+
+-   Educational Institutions: This dataset provides information regarding the geographic placement of all educational institutions and schools situated within the boundaries of Hamilton. The categorization encompasses various educational levels, including Elementary, Middle, Secondary, Post Secondary, Alternative Education, and Adult Learning establishments.
+
+**Census Population, Age and Gender**
+
+In the 2021 Census, Statistics Canada introduced the concept of gender. Given that the non-binary population is small, data aggregation to a two-category gender variable was necessary to protect the confidentiality of responses provided. In these cases, individuals in the category "non-binary persons" are distributed into the other two gender categories and are denoted by the "+" symbol.
+
+Data is derived from custom tabulations of Statistic Canada's Census obtained by the City of Hamilton as a consortium member of the Canadian Community Economic Development Network (CCEDNet) Community Data Program.
+
+## \[City of Vancouver\] (https://opendata.vancouver.ca/explore/)
+
+**Cycling and pedestrian Networks**
+
+\*Bikeways
+
+This dataset contains information about bikeways in City of Vancouver. These bikeways follow street centrelines so their placement in the street right of way is approximate. This dataset is maintained manually.This dataset includes data on shorter bikeway segments which can be different than how the bikeways are dispayed in the Vancouver Cycling Map.
+
+**Land use and Land cover**
+
+-   Property addresses
+
+The property addresses dataset contains addresses used for parcel polygon display. Please note: these addresses are the primary addresses displayed in VanMap and do not represent a complete set of all addresses. Some addresses are duplicated because they appear more than once on VanMap.
+
+\*Property parcel polygons
+
+The property parcel polygons are assessment based land polygons.
+
+**Points of Interest (POI)**
+
+-   Parks: This data set provides information on the names and locations of City parks.
+
+-   Cultural Spaces: This data set provides locations and attributes of cultural spaces in the City of Vancouver, University Endowment Lands and Musqueam Community.
+
+-   Schools: This dataset includes the name, address, location and category of schools in Vancouver.
+
+-   Libraries: This data set contains the name, address and latitude and longitude of each of the City's public libraries.
+
+## [City of Halifax](https://catalogue-hrm.opendata.arcgis.com/search?tags=Halifax%20Open%20Data)
+
+**Cycling and pedestrian Networks**
+
+-   Bike Infrastructure and Suggested Routes
+
+Line representation of existing and suggested bike routes and infrastructure within the Halifax Regional Municipality. This dataset includes Bike Facility ID, Bike Facility Type, Bike Facility Name, Street Name, Bike Facility Implementation, Pilot Project or Permanent, One Side Only, Direction, Install Year,Physical Protection.
+
+-   Active Travelways
+
+Active Travelways is a Linear representation of assets that includes trails, sidewalks, walkways, pathways and Multi-Use Pathways.
+
+-   Pedestrian Oriented Commercial Streets
+
+Linear representation of the location of pedestrian oriented commercial streets as defined in the Regional Centre Land Use By-law.
+
+-   Trails Single line representations of trails that are either owned, maintained, or of interest to HRM.
+
+**Land use and Land cover**
+
+-   Outdoor Recreation: Polygon representations of HRM owned or maintained outdoor recreation areas such as active use areas, sport fields, sport courts, ball diamonds, and water related areas.
+
+**Points of Interest (POI)**
+
+-   Bus Stops: Point representation of bus stop locations which occur along roadways, terminals and park and ride facilities.
+
+-   Outdoor Recreation Equipment: Points representation of HRM owned or maintained outdoor recreation equipment such as playground equipment, outdoor gym equipment, basketball hoops and modular ramps.
+
+-   Park Recreation Features: Point representation of various owned or maintained outdoor recreational uses.
+
+-   Schools: This dataset includes the school locations in Halifax.
+
+## [City Of Waterloo](https://data.waterloo.ca/search?tags=base%20data)
+
+**Cycling and pedestrian Networks**
+
+\*Active Transportation
+
+Active Transportation represents active transportation infrastructure includes: cycling, sidewalks, walkways and pathways (trails).
+
+\*Trail and Sidewalk Clearing
+
+This dataset provides Sidewalks and Trails plowed or shovelled by the City.
+
+\*Walkability
+
+This dataset is a combination of sidewalks, trails and links forming a continuous network. To be used in conjunction with the road network. Walkability is a measure of how accommodating the built environment is to walking. This dataset is a work-in-progress and will be updated as new information becomes available.
+
+**Points of Interest (POI)**
+
+-   Places of Worship
+-   Points of Interest: Point locations of various points of interest within the City of Waterloo.
+-   Schools
+
+## [City Of Kitchener](https://data.waterloo.ca/search?tags=base%20data)
+
+**Cycling and pedestrian Networks**
+
+-   Trails - Community trails are multi-use pathways that exist throughout the city.
+
+-   Sidewalk: The sidewalk inventory provides information and location of sidewalks along right of ways in the city.
+
+-   Cycling Infrastructure: The cycling data contains bicycle lanes, signed bicycle routes and pathways.
+
+-   Crosswalk : The crosswalk inventory provides information and location of crosswalks along right of ways in the city
+
+**Points of Interest (POI)**
+
+-   Parks: This dataset includes shapefile of parks in Kitchener.
+
+-   Libraries: This dataset includes Kitchener Public Library (KPL) locations.
+
+-   Playgrounds
+
+-   Business Directory:This dataset contains list of businesses operating in the City of Kitchener in 2017.
+
+-   Landmarks includes: education facilities, government services, parks, emergency services, entertainment, points of interest and more
+
+-   Points of Interest: Point locations of various points of interest within the City of Kitchener
+
+-   Arenas and Outdoor Ice Rinks
+
+-   Pools and Splash Pads
+
+-   Places of Worship
+
+-   Public Art and Industrial Artifacts
+
+-   Sports facilities
+
+-   Education Facility
+
+-   Community Centres
+
+-   Museums
+
+-   Hospitals
 
 In Table 6, each database was examined based on seven data categories.
 
-| Dataset                                                                 | Travel Data | Users Data | Origin-Destination Data | Cycling and Walking data | Spatial data | additional data |
-|-------------------|---------|---------|---------|---------|---------|---------|
-| [General social survey (GSS)]()                                             | Y           | Y          | Y                       | \-                       | \-           | \-              |
-| [Transportation Tomorrow Survey (TTS) of Toronto](http://dmg.utoronto.ca/transportation-tomorrow-survey/tts-introduction)                         | Y           | Y          | Y                       | Y                        | Y            | Y               |
-| [Autorité régionale de transport métropolitain (ARTM) survey of Montreal](https://donnees.artm.quebec/depots) | Y           | Y          | Y                       | Y                        | Y            | Y               |
-| [The Linkable Open Data Environment (LODE)](https://www.statcan.gc.ca/en/lode/databases)                               | \-          | \-         | Y                       | \-                       | \-           | \-              |
-| [Can-BICS](https://www.arcgis.com/home/item.html?id=6a15224d9ea347c9898c112f974c47a2)                                                                | \-          | \-         | \-                      | Y                        | \-           | Stress Level    |
-| [open street map](https://www.openstreetmap.org/#map=3/71.34/-96.82)                                                         | \-          | \-         | \-                      | Y                        | Y            | \-              |
-| [Toronto open data](https://open.toronto.ca/catalogue/)                                                     | \-          | \-         | \-                      | Y                        | \-           | \-              |
-| [Vancouver open data](https://vancouver.ca/streets-transportation/walk-bike-and-transit.aspx)                                                     | \-          | \-         | \-                      | Y                        | \-           | \-              |
-| [Montreal open data](https://montreal.ca/en/articles/open-data-window-municipal-arena-32256)                                                     | \-          | \-         | \-                      | Y                        | \-           | \-              |
+| Dataset                                                                                                                   | Travel Data | Users Data | Origin-Destination Data | Cycling and Walking data | Spatial data | additional data |
+|-----------|----------|----------|----------|----------|----------|----------|
+| [General social survey (GSS)]()                                                                                           | Y           | Y          | Y                       | \-                       | \-           | \-              |
+| [Transportation Tomorrow Survey (TTS) of Toronto](http://dmg.utoronto.ca/transportation-tomorrow-survey/tts-introduction) | Y           | Y          | Y                       | Y                        | Y            | Y               |
+| [Autorité régionale de transport métropolitain (ARTM) survey of Montreal](https://donnees.artm.quebec/depots)             | Y           | Y          | Y                       | Y                        | Y            | Y               |
+| [The Linkable Open Data Environment (LODE)](https://www.statcan.gc.ca/en/lode/databases)                                  | \-          | \-         | Y                       | \-                       | \-           | \-              |
+| [Can-BICS](https://www.arcgis.com/home/item.html?id=6a15224d9ea347c9898c112f974c47a2)                                     | \-          | \-         | \-                      | Y                        | \-           | Stress Level    |
+| [open street map](https://www.openstreetmap.org/#map=3/71.34/-96.82)                                                      | \-          | \-         | \-                      | Y                        | Y            | \-              |
+| [Toronto open data](https://open.toronto.ca/catalogue/)                                                                   | \-          | \-         | \-                      | Y                        | \-           | \-              |
+| [Vancouver open data](https://vancouver.ca/streets-transportation/walk-bike-and-transit.aspx)                             | \-          | \-         | \-                      | Y                        | \-           | \-              |
+| [Montreal open data](https://montreal.ca/en/articles/open-data-window-municipal-arena-32256)                              | \-          | \-         | \-                      | Y                        | \-           | \-              |
 
 : **Table 8.** Availability of datasets {tbl-colwidths="\[75,25\]"}
 
